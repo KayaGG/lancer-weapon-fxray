@@ -16,3 +16,4 @@ packs/
 /.vs/slnx.sqlite
 *.sqlite-journal
 /.vs/VSWorkspaceState.json
+/module.zip
