@@ -42,16 +42,6 @@
                     "minimum": "1.1.0"
                 }
             }
-        ],
-        "recommends": [
-            {
-                "id": "jb2a_patreon",
-                "type": "module"
-            },
-            {
-                "id": "JB2A_DnD5e",
-                "type": "module"
-            }
         ]
     },
     "languages": [
