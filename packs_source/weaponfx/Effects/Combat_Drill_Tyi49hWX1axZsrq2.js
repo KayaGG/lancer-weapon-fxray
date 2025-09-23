@@ -15,6 +15,7 @@ let gridscale = gridsize / 100;
 for (const target of targetTokens) {
     sequence
         .effect()
+            .xray()
             .file("modules/lancer-weapon-fx/sprites/DRILL.png")
             .scale(0.6)
             .filter("Glow", { color: 0xd7d23c })
@@ -33,6 +34,7 @@ for (const target of targetTokens) {
                 .repeats(8, 125)
                 .delay(200)
             .effect()
+                .xray()
                 .file("jb2a.gust_of_wind.veryfast")
                 .scale(0.2)
                 .atLocation(sourceToken)
@@ -40,6 +42,7 @@ for (const target of targetTokens) {
                 .zIndex(2)
                 .delay(50)
             .effect()
+                .xray()
                 .file("jb2a.impact.yellow")
                 .scale(0.4)
                 .delay(200)

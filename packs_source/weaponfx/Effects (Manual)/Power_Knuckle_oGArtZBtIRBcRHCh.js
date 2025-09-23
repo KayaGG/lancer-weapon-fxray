@@ -11,6 +11,7 @@ let sequence = new Sequence();
 for (const target of targetTokens) {
     sequence
         .effect()
+            .xray()
             .file("jb2a.unarmed_strike.physical.02.blue")
             .scale(0.9)
             .atLocation(sourceToken)

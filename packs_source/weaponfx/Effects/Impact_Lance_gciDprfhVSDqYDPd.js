@@ -16,6 +16,7 @@ for (const target of targetTokens) {
             .volume(game.modules.get("lancer-weapon-fx").api.getEffectVolume(0.5));
     sequence
         .effect()
+            .xray()
             .file("jb2a.disintegrate.green")
             .startTime(900)
             .scale(0.86)

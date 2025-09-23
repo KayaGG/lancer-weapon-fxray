@@ -31,11 +31,13 @@ let sequence = new Sequence()
         .volume(game.modules.get("lancer-weapon-fx").api.getEffectVolume(0.5));
 sequence
     .effect()
+        .xray()
         .file("jb2a.bullet.01.orange")
         .from(sourceToken)
         .stretchTo(pBlast)
         .waitUntilFinished(-200)
     .effect()
+        .xray()
         .file("jb2a.explosion.08")
         .atLocation(pBlast)
         .opacity(0.4)
@@ -59,6 +61,7 @@ for (let i = 0; i < targetTokens.length; i++) {
 
     sequence
         .effect()
+            .xray()
             .file("jb2a.bullet.02.orange")
             .playIf(!targetsMissed.has(target.id))
             .scale(0.5)
@@ -66,6 +69,7 @@ for (let i = 0; i < targetTokens.length; i++) {
             .atLocation(pBlast)
             .stretchTo(target)
         .effect()
+            .xray()
             .file("jb2a.explosion_side.01")
             .playIf(!targetsMissed.has(target.id))
             .atLocation(target)
@@ -79,6 +83,7 @@ for (let i = 0; i < targetTokens.length; i++) {
             .delay(450)
             .repeats(2, 300)
        .effect()
+            .xray()
            .file("jb2a.explosion_side.01")
            .atLocation('impact${i}')
            .rotateTowards(pBlast)

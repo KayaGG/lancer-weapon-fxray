@@ -17,6 +17,7 @@ for (const target of targetTokens) {
             .waitUntilFinished(-3400);
     sequence
         .effect()
+            .xray()
             .file("jb2a.unarmed_strike.physical.01.blue")
             .filter("ColorMatrix", { hue: 000, brightness: 0.5 })
             .filter("Glow", { distance: 3, color: 0xe99649, innerStrength: 2 })
@@ -30,6 +31,7 @@ for (const target of targetTokens) {
 
     sequence
         .effect()
+            .xray()
             .file("jb2a.explosion_side.01.orange")
             .scaleToObject(6)
             .atLocation("impact")
@@ -39,6 +41,7 @@ for (const target of targetTokens) {
             .zIndex(1);
     sequence
         .effect()
+            .xray()
             .file("jb2a.explosion.side_fracture.flask.01")
             .playIf(!targetsMissed.has(target.id))
             .scaleToObject(3)

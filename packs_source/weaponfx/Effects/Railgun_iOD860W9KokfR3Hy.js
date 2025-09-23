@@ -21,6 +21,7 @@ const repeatImpactAnimationForEachTarget = function (sequence, targets) {
         if (!targetsMissed.has(t.id)) {
             sequence
                 .effect()
+                    .xray()
                     .file("jb2a.impact.orange.0")
                     .atLocation(t)
                     .rotateTowards(sourceToken)
@@ -48,6 +49,7 @@ let sequence = new Sequence()
 
 sequence
     .effect()
+        .xray()
         .file("jb2a.bullet.Snipe.blue")
         .atLocation(sourceToken)
         .stretchTo(target)

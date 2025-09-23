@@ -12,6 +12,7 @@ let sequence = new Sequence();
 for (const target of targetTokens) {
     sequence
         .effect()
+            .xray()
             .file("jb2a.melee_attack.01.magic_sword.yellow")
             .filter("ColorMatrix", { hue: 180 })
             .delay(500)
@@ -33,6 +34,7 @@ for (const target of targetTokens) {
             .volume(game.modules.get("lancer-weapon-fx").api.getEffectVolume(0.7));
     sequence
         .effect()
+            .xray()
             .file("jb2a.impact.blue.3")
             .playIf(!targetsMissed.has(target.id))
             .scaleToObject(2)

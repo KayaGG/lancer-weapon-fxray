@@ -28,6 +28,7 @@ for (const target of targetTokens) {
     }
     sequence
         .effect()
+            .xray()
             .file("jb2a.bullet.01.orange")
             .atLocation(sourceToken)
             .scale(0.9)

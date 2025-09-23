@@ -11,6 +11,7 @@ await Sequencer.Preloader.preloadForClients([
 let sequence = new Sequence()
 
     .effect()
+        .xray()
         .file("jb2a.burning_hands.01.orange")
         .atLocation(sourceToken)
         .rotateTowards(target)
@@ -26,6 +27,7 @@ for (let i = 0; i < targetTokens.length; i++) {
     if (!targetsMissed.has(target.id)) {
         sequence
             .effect()
+                .xray()
                 .file("jb2a.flames.02.orange")
                 .opacity(0.7)
                 .fadeIn(800)

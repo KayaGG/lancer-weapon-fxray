@@ -17,6 +17,7 @@ for (const target of targetTokens) {
 
     sequence
         .effect()
+            .xray()
             .file("jb2a.impact.orange.0")
             .atLocation(target, { randomOffset: 0.7 }, { gridUnits: true })
             .rotateTowards(sourceToken)

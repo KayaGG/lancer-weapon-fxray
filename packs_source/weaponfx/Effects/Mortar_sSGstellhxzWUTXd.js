@@ -7,6 +7,7 @@ const repeatImpactAnimationForEachTarget = function (sequence, targetTokens) {
         if (!targetsMissed.has(t.id)) {
             sequence
                 .effect()
+                    .xray()
                     .file("jb2a.explosion_side.01.orange")
                     .atLocation(t)
                     .rotateTowards(centerMass)
@@ -35,12 +36,14 @@ sequence
         .volume(game.modules.get("lancer-weapon-fx").api.getEffectVolume(0.5));
 sequence
     .effect()
+        .xray()
         .file("jb2a.smoke.puff.side.02.white")
         .atLocation(sourceToken)
         .rotateTowards(centerMass)
         .scale({ y: 0.5 });
 sequence
     .effect()
+        .xray()
         .file("jb2a.bullet.02.orange")
         .atLocation(sourceToken)
         .stretchTo(centerMass)
@@ -50,6 +53,7 @@ sequence
 sequence.effect().file("jb2a.explosion.shrapnel.bomb.01.black").atLocation(centerMass).scale(0.5);
 sequence
     .effect()
+        .xray()
         .file("jb2a.explosion.08.orange")
         .atLocation(centerMass)
         .rotateTowards(sourceToken)

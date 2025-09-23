@@ -26,6 +26,7 @@ for (const targetPoint of targetPoints) {
             .timeRange(700, 2000);
     sequence
         .effect()
+            .xray()
             .file("jb2a.throwable.launch.missile")
             .atLocation(sourceToken)
             .stretchTo(targetPoint)

@@ -53,8 +53,8 @@ canvas.stage.on('click', async (event) => {
 
     // Play the effects at the original positions
     new Sequence()
-        .effect().file("jb2a.explosion.08.orange").atLocation({ x: snappedPos.x - gridSize / 4, y: snappedPos.y - gridSize / 6 }).delay(500)
-        .effect().file("jb2a.explosion.shrapnel.bomb.01.black").atLocation({ x: snappedPos.x - gridSize / 4, y: snappedPos.y - gridSize / 6 }).scale(0.6).delay(600)
+        .effect().xray().file("jb2a.explosion.08.orange").atLocation({ x: snappedPos.x - gridSize / 4, y: snappedPos.y - gridSize / 6 }).delay(500)
+        .effect().xray().file("jb2a.explosion.shrapnel.bomb.01.black").atLocation({ x: snappedPos.x - gridSize / 4, y: snappedPos.y - gridSize / 6 }).scale(0.6).delay(600)
         .sound("modules/lancer-weapon-fx/soundfx/Missile_Impact.ogg").volume(game.modules.get("lancer-weapon-fx").api.getEffectVolume(0.7)).delay(500)
         .play();
 });

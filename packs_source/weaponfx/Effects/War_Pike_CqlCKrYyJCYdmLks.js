@@ -12,6 +12,7 @@ let sequence = new Sequence();
 for (const target of targetTokens) {
     sequence
         .effect()
+            .xray()
             .file("jb2a.spear.melee.01.white.2")
             .filter("Glow", {
             color: 0x5f5858,
@@ -38,6 +39,7 @@ for (const target of targetTokens) {
             .volume(game.modules.get("lancer-weapon-fx").api.getEffectVolume(0.7));
     sequence
         .effect()
+            .xray()
             .file("jb2a.impact.orange.3")
             .playIf(!targetsMissed.has(target.id))
             .scaleToObject(2)

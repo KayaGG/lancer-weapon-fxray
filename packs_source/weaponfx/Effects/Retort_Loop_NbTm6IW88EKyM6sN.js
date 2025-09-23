@@ -15,6 +15,7 @@ for (const target of targetTokens) {
             .volume(game.modules.get("lancer-weapon-fx").api.getEffectVolume(0.8));
     sequence
         .effect()
+            .xray()
             .file("jb2a.energy_beam.normal.bluepink.02")
             .scale(0.7)
             .atLocation(sourceToken)
@@ -25,6 +26,7 @@ for (const target of targetTokens) {
     if (!targetsMissed.has(target.id)) {
         sequence
             .effect()
+                .xray()
                 .file("jb2a.impact.blue")
                 .scale(0.3)
                 .atLocation(target, { randomOffset: 0.9 })
@@ -33,6 +35,7 @@ for (const target of targetTokens) {
     } else {
         sequence
             .effect()
+                .xray()
                 .file("jb2a.impact.blue")
                 .scale(0.3)
                 .atLocation("impact", { randomOffset: 0.9 })

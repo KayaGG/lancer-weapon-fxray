@@ -13,6 +13,7 @@ let sequence = new Sequence();
 for (const target of targetTokens) {
     sequence
         .effect()
+            .xray()
             .file("jb2a.melee_attack.01.magic_sword.yellow")
             .delay(500)
             .scaleToObject(6)
@@ -34,6 +35,7 @@ for (const target of targetTokens) {
             .volume(game.modules.get("lancer-weapon-fx").api.getEffectVolume(0.7));
     sequence
         .effect()
+            .xray()
             .file("jb2a.impact.blue.3")
             .playIf(!targetsMissed.has(target.id))
             .scaleToObject(2)
@@ -41,6 +43,7 @@ for (const target of targetTokens) {
             .waitUntilFinished(-1200);
     sequence
         .effect()
+            .xray()
             .file("jb2a.static_electricity.03")
             .playIf(!targetsMissed.has(target.id))
             .scaleToObject()

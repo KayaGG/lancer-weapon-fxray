@@ -26,6 +26,7 @@ let sequence = new Sequence();
 for (const target of targetTokens) {
     sequence
         .effect()
+            .xray()
             .file("jb2a.bullet.Snipe.blue")
             .filter("ColorMatrix", { hue: 60 })
             .filter("Glow", { distance: 3 })

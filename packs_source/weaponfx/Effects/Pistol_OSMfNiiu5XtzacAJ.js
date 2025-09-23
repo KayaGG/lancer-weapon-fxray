@@ -17,6 +17,7 @@ for (const target of targetTokens) {
             .volume(game.modules.get("lancer-weapon-fx").api.getEffectVolume(0.5));
     sequence
         .effect()
+            .xray()
             .file("jb2a.bullet.01.orange")
             .atLocation(sourceToken)
             .scale(0.5)

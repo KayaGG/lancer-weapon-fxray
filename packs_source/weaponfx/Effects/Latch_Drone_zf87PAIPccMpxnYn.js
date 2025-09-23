@@ -12,6 +12,7 @@ let sequence = new Sequence();
 for (const target of targetTokens) {
     sequence
         .effect()
+            .xray()
             .file("modules/lancer-weapon-fx/sprites/LatchDrone.png")
             .rotate(260)
             .atLocation(sourceToken)
@@ -31,6 +32,7 @@ for (const target of targetTokens) {
                 .volume(game.modules.get("lancer-weapon-fx").api.getEffectVolume(0.9))
                 .delay(200)
             .effect()
+                .xray()
                 .file("jb2a.healing_generic.400px.green")
                 .atLocation(target)
                 .scale(0.5)

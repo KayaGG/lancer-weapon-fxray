@@ -67,11 +67,13 @@ sequence
         .volume(game.modules.get("lancer-weapon-fx").api.getEffectVolume(0.5));
 sequence
     .effect()
+        .xray()
         .file("jb2a.arrow.physical.blue")
         .atLocation(sourceToken)
         .stretchTo(farthest)
         .waitUntilFinished(-1000)
     .effect()
+        .xray()
         .file("jb2a.chain_lightning.primary.blue")
         .atLocation(sourceToken)
         .stretchTo(farthest)

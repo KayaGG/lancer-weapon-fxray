@@ -12,6 +12,7 @@ let sequence = new Sequence();
 for (const target of targetTokens) {
     sequence
         .effect()
+            .xray()
             .file("jb2a.melee_attack.03.trail.greatsword")
             .tint("#080303")
             .filter("Glow", { color: 0x8f0f0f })

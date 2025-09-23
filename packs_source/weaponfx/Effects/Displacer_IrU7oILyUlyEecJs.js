@@ -21,6 +21,7 @@ let sequence = new Sequence()
         .fadeInAudio(300)
 
     .effect()
+        .xray()
         .file("jb2a.dancing_light.purplegreen")
         .tint("#2d0a3d")
         .filter("Glow", { strength: 1, color: 0x34e5d0 })
@@ -32,6 +33,7 @@ let sequence = new Sequence()
 
 sequence
     .effect()
+        .xray()
         .file("jb2a.fumes.steam.white")
         .fadeIn(1500)
         .fadeOut(1500)
@@ -46,6 +48,7 @@ sequence
         .volume(game.modules.get("lancer-weapon-fx").api.getEffectVolume(0.8));
 sequence
     .effect()
+        .xray()
         .file("jb2a.divine_smite.caster.blueyellow")
         .tint("#2d0a3d")
         .filter("Glow", { strength: 1, color: 0x34e5d0 })
@@ -64,6 +67,7 @@ for (let i = 0; i < targetTokens.length; i++) {
                 .volume(game.modules.get("lancer-weapon-fx").api.getEffectVolume(0.6));
         sequence
             .effect()
+                .xray()
                 .file("jb2a.impact.blue")
                 .tint("#2d0a3d")
                 .filter("Glow", { strength: 2, color: 0x34e5d0 })

@@ -33,6 +33,7 @@ for (const target of targetTokens) {
     if (!targetsMissed.has(target.id)) {
         sequence
             .effect()
+                .xray()
                 .file("jb2a.static_electricity.03")
                 .atLocation(target, { offset: { x: ipivotx, y: ipivoty}})
                 .scaleToObject(1)
@@ -41,6 +42,7 @@ for (const target of targetTokens) {
                 .delay(500)
                 .mask(target)
             .effect()
+                .xray()
                 .file("jb2a.impact.blue.2")
                 .scaleToObject(1.5)
                 .atLocation(target, { randomOffset: 0.5, gridUnits: true })

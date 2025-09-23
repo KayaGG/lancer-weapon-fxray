@@ -16,6 +16,7 @@ sequence
         .volume(game.modules.get("lancer-weapon-fx").api.getEffectVolume(0.5));
 sequence
     .effect()
+        .xray()
         .file("jb2a.breath_weapons02.burst.line")
         .atLocation(sourceToken)
         .filter("ColorMatrix", { hue: 180, brightness: 0.2, contrast: 0.5 })
@@ -30,6 +31,7 @@ for (let i = 0; i < targetTokens.length; i++) {
     if (!targetsMissed.has(target.id)) {
         sequence
             .effect()
+                .xray()
                 .file("jb2a.grease.dark_brown.loop")
                 .opacity(0.8)
                 .fadeIn(800)

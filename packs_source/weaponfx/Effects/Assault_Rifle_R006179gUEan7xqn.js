@@ -12,6 +12,7 @@ for (let i = 0; i < targetTokens.length; i++) {
             .volume(game.modules.get("lancer-weapon-fx").api.getEffectVolume(0.5));
     sequence
         .effect()
+            .xray()
             .file("jb2a.bullet.01.orange")
             .atLocation(sourceToken)
             .stretchTo(target)
@@ -20,6 +21,7 @@ for (let i = 0; i < targetTokens.length; i++) {
             .waitUntilFinished(-550);
     sequence
         .effect()
+            .xray()
             .file("jb2a.bullet.01.orange")
             .atLocation(sourceToken)
             .stretchTo(`impact${i}`, { randomOffset: 0.4, gridUnits: true })
