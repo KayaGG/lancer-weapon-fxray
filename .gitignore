@@ -17,3 +17,4 @@ packs/
 *.sqlite-journal
 /.vs/VSWorkspaceState.json
 /module.zip
+/module old.zip
