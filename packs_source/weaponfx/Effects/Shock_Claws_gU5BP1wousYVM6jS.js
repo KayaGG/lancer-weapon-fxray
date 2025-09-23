@@ -10,7 +10,7 @@ const ipivoty = -pivoty;
 
 await Sequencer.Preloader.preloadForClients([
     "jb2a.claws.400px.red",
-    "modules/lancer-weapon-fx/soundfx/Melee.ogg",
+    "modules/lancer-weapon-fxray/soundfx/Melee.ogg",
     "jb2a.impact.blue.2",
 ]);
 
@@ -27,7 +27,7 @@ for (const target of targetTokens) {
             .atLocation(target, { offset: { x: ipivotx, y: ipivoty}})
             .missed(targetsMissed.has(target.id)); 
         sequence.sound()
-            .file("modules/lancer-weapon-fx/soundfx/Melee.ogg")
+            .file("modules/lancer-weapon-fxray/soundfx/Melee.ogg")
             .volume(game.modules.get("lancer-weapon-fx").api.getEffectVolume(0.5))
             .repeats(2, 250);
     if (!targetsMissed.has(target.id)) {

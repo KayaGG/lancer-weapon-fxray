@@ -34,16 +34,16 @@ const repeatImpactAnimationForEachTarget = function (sequence, targets) {
 
 await Sequencer.Preloader.preloadForClients([
     "jb2a.impact.orange.0",
-    "modules/lancer-weapon-fx/soundfx/Annihilator_Charge.ogg",
+    "modules/lancer-weapon-fxray/soundfx/Annihilator_Charge.ogg",
     "jb2a.bullet.Snipe.blue",
-    "modules/lancer-weapon-fx/soundfx/AMR_Fire.ogg",
-    "modules/lancer-weapon-fx/soundfx/AMR_Impact.ogg",
+    "modules/lancer-weapon-fxray/soundfx/AMR_Fire.ogg",
+    "modules/lancer-weapon-fxray/soundfx/AMR_Impact.ogg",
 ]);
 
 let sequence = new Sequence()
 
     .sound()
-        .file("modules/lancer-weapon-fx/soundfx/Annihilator_Charge.ogg")
+        .file("modules/lancer-weapon-fxray/soundfx/Annihilator_Charge.ogg")
         .volume(game.modules.get("lancer-weapon-fx").api.getEffectVolume(0.5))
         .waitUntilFinished(-500);
 
@@ -55,11 +55,11 @@ sequence
         .stretchTo(target)
 
     .sound()
-        .file("modules/lancer-weapon-fx/soundfx/AMR_Fire.ogg")
+        .file("modules/lancer-weapon-fxray/soundfx/AMR_Fire.ogg")
         .volume(game.modules.get("lancer-weapon-fx").api.getEffectVolume(0.5))
 
     .sound()
-        .file("modules/lancer-weapon-fx/soundfx/AMR_Impact.ogg")
+        .file("modules/lancer-weapon-fxray/soundfx/AMR_Impact.ogg")
         .volume(game.modules.get("lancer-weapon-fx").api.getEffectVolume(0.5));
 
 sequence = repeatImpactAnimationForEachTarget(sequence, targetTokens);

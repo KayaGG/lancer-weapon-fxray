@@ -4,7 +4,7 @@ const target = targetTokens[0];
 
 await Sequencer.Preloader.preloadForClients([
     "jb2a.fire_jet.orange",
-    "modules/lancer-weapon-fx/soundfx/flamethrower_fire.ogg",
+    "modules/lancer-weapon-fxray/soundfx/flamethrower_fire.ogg",
 ]);
 
 let sequence = new Sequence()
@@ -17,6 +17,6 @@ let sequence = new Sequence()
         .atLocation(sourceToken)
         .stretchTo(target)
     .sound()
-        .file("modules/lancer-weapon-fx/soundfx/flamethrower_fire.ogg")
+        .file("modules/lancer-weapon-fxray/soundfx/flamethrower_fire.ogg")
         .volume(game.modules.get("lancer-weapon-fx").api.getEffectVolume(0.5))
     .play();

@@ -5,10 +5,10 @@ const target = targetTokens[0];
 await Sequencer.Preloader.preloadForClients([
     "jb2a.disintegrate.green",
     "jb2a.impact.blue",
-    "modules/lancer-weapon-fx/sprites/jetlancer_explosion_white_bg.png",
-    "modules/lancer-weapon-fx/sprites/shockwave.png",
-    "modules/lancer-weapon-fx/soundfx/pw_nuke.ogg",
-    "modules/lancer-weapon-fx/video/pw_nuke_effect.webm",
+    "modules/lancer-weapon-fxray/sprites/jetlancer_explosion_white_bg.png",
+    "modules/lancer-weapon-fxray/sprites/shockwave.png",
+    "modules/lancer-weapon-fxray/soundfx/pw_nuke.ogg",
+    "modules/lancer-weapon-fxray/video/pw_nuke_effect.webm",
 ]);
 
 new Sequence()
@@ -41,12 +41,12 @@ new Sequence()
         .atLocation(target, { randomOffset: 1.2, gridUnits: true })
         .repeats(10, 200, 700)
         .waitUntilFinished(-500)
-    .effect("modules/lancer-weapon-fx/sprites/jetlancer_explosion_white_bg.png")
+    .effect("modules/lancer-weapon-fxray/sprites/jetlancer_explosion_white_bg.png")
         .fadeIn(100)
         .duration(6000)
         .fadeOut(3000)
         .screenSpace()
-    .effect("modules/lancer-weapon-fx/sprites/shockwave.png")
+    .effect("modules/lancer-weapon-fxray/sprites/shockwave.png")
         .atLocation(target)
         .filter("ColorMatrix", { hue: 090 })
         .duration(7000)
@@ -54,10 +54,10 @@ new Sequence()
         .scaleOut(12, 7000)
         .fadeOut(7000)
         .delay(3000)
-    .sound("modules/lancer-weapon-fx/soundfx/pw_nuke.ogg")
+    .sound("modules/lancer-weapon-fxray/soundfx/pw_nuke.ogg")
         .startTime(800)
         .delay(1000)
-    .effect("modules/lancer-weapon-fx/video/pw_nuke_effect.webm")
+    .effect("modules/lancer-weapon-fxray/video/pw_nuke_effect.webm")
         .filter("ColorMatrix", { hue: 090 })
         .delay(1000)
         .atLocation(target)

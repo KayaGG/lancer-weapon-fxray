@@ -7,12 +7,12 @@ const pivoty = token.document.flags["hex-size-support"]?.pivoty || 0;
 const ipivoty = -pivoty;
 
 await Sequencer.Preloader.preloadForClients([
-    "modules/lancer-weapon-fx/soundfx/dramaticSparkles.ogg",
-    "modules/lancer-weapon-fx/soundfx/ReactorWarning.ogg",
-    "modules/lancer-weapon-fx/advisories/IrreversibleMeltdown.svg",
+    "modules/lancer-weapon-fxray/soundfx/dramaticSparkles.ogg",
+    "modules/lancer-weapon-fxray/soundfx/ReactorWarning.ogg",
+    "modules/lancer-weapon-fxray/advisories/IrreversibleMeltdown.svg",
     "jb2a.static_electricity.03",
     "jb2a.smoke.plumes.01.grey",
-    "modules/lancer-weapon-fx/soundfx/Annihilator.ogg",
+    "modules/lancer-weapon-fxray/soundfx/Annihilator.ogg",
     "jb2a.breath_weapons02.burst.line.fire.orange.01",
     "jb2a.moonbeam.01.loop",
 ]);
@@ -20,10 +20,10 @@ await Sequencer.Preloader.preloadForClients([
 new Sequence()
 
     .sound()
-        .file("modules/lancer-weapon-fx/soundfx/dramaticSparkles.ogg")
+        .file("modules/lancer-weapon-fxray/soundfx/dramaticSparkles.ogg")
         .volume(game.modules.get("lancer-weapon-fx").api.getEffectVolume(0.2))
     .sound()
-        .file("modules/lancer-weapon-fx/soundfx/ReactorWarning.ogg")
+        .file("modules/lancer-weapon-fxray/soundfx/ReactorWarning.ogg")
         .volume(game.modules.get("lancer-weapon-fx").api.getEffectVolume(0.5))
         .repeats(3, 1000)
     .effect()
@@ -39,7 +39,7 @@ new Sequence()
         .mask(sourceToken)
     .effect()
         .xray()
-        .file("modules/lancer-weapon-fx/advisories/IrreversibleMeltdown.svg")
+        .file("modules/lancer-weapon-fxray/advisories/IrreversibleMeltdown.svg")
         .attachTo(sourceToken, { align: "bottom-left", edge: "inner", offset: { y: 0.1 }, gridUnits: true })
         .animateProperty("sprite", "position.y", { from: 0, to: 1, duration: 3500, gridUnits: true, fromEnd: true })
         .scaleIn(0.01, 500)
@@ -73,7 +73,7 @@ new Sequence()
         .rotate(-35)
         .belowTokens()
     .sound()
-        .file("modules/lancer-weapon-fx/soundfx/Annihilator.ogg")
+        .file("modules/lancer-weapon-fxray/soundfx/Annihilator.ogg")
         .volume(game.modules.get("lancer-weapon-fx").api.getEffectVolume(0.5))
     .effect()
         .xray()
@@ -89,7 +89,7 @@ new Sequence()
         .belowTokens()
         .waitUntilFinished(-2000)
     .sound()
-        .file("modules/lancer-weapon-fx/soundfx/Annihilator.ogg")
+        .file("modules/lancer-weapon-fxray/soundfx/Annihilator.ogg")
         .volume(game.modules.get("lancer-weapon-fx").api.getEffectVolume(0.5))
     .effect()
         .xray()

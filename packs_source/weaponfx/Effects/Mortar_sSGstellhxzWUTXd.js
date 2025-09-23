@@ -20,19 +20,19 @@ const repeatImpactAnimationForEachTarget = function (sequence, targetTokens) {
 
 await Sequencer.Preloader.preloadForClients([
     "jb2a.explosion_side.01.orange",
-    "modules/lancer-weapon-fx/soundfx/Mortar_Launch.ogg",
+    "modules/lancer-weapon-fxray/soundfx/Mortar_Launch.ogg",
     "jb2a.smoke.puff.side.02.white",
     "jb2a.bullet.02.orange",
     "jb2a.explosion.shrapnel.bomb.01.black",
     "jb2a.explosion.08.orange",
-    "modules/lancer-weapon-fx/soundfx/Mortar_Impact.ogg",
+    "modules/lancer-weapon-fxray/soundfx/Mortar_Impact.ogg",
 ]);
 
 let sequence = new Sequence();
 
 sequence
     .sound()
-        .file("modules/lancer-weapon-fx/soundfx/Mortar_Launch.ogg")
+        .file("modules/lancer-weapon-fxray/soundfx/Mortar_Launch.ogg")
         .volume(game.modules.get("lancer-weapon-fx").api.getEffectVolume(0.5));
 sequence
     .effect()
@@ -61,7 +61,7 @@ sequence
         .center();
 sequence
     .sound()
-        .file("modules/lancer-weapon-fx/soundfx/Mortar_Impact.ogg")
+        .file("modules/lancer-weapon-fxray/soundfx/Mortar_Impact.ogg")
         .volume(game.modules.get("lancer-weapon-fx").api.getEffectVolume(0.5));
 
 sequence = repeatImpactAnimationForEachTarget(sequence, targetTokens);

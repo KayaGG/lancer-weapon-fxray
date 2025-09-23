@@ -4,7 +4,7 @@ const target = game.modules.get("lancer-weapon-fx").api.getTargetLocationsFromTo
 
 await Sequencer.Preloader.preloadForClients([
     "jb2a.burning_hands.01.orange",
-    "modules/lancer-weapon-fx/soundfx/flamethrower_fire.ogg",
+    "modules/lancer-weapon-fxray/soundfx/flamethrower_fire.ogg",
     "jb2a.flames.02.orange",
 ]);
 
@@ -17,7 +17,7 @@ let sequence = new Sequence()
         .rotateTowards(target)
         .scale({ x: 0.75, y: 1.0 })
     .sound()
-        .file("modules/lancer-weapon-fx/soundfx/flamethrower_fire.ogg")
+        .file("modules/lancer-weapon-fxray/soundfx/flamethrower_fire.ogg")
         .volume(game.modules.get("lancer-weapon-fx").api.getEffectVolume(0.5))
         .waitUntilFinished(-3000);
 

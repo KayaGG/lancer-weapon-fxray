@@ -2,8 +2,8 @@ const { targetsMissed, targetTokens, sourceToken } = game.modules.get("lancer-we
 
 await Sequencer.Preloader.preloadForClients([
     "jb2a.greataxe.melee.standard.white",
-    "modules/lancer-weapon-fx/soundfx/Axe_swing.ogg",
-    "modules/lancer-weapon-fx/soundfx/Axe_Hit.ogg",
+    "modules/lancer-weapon-fxray/soundfx/Axe_swing.ogg",
+    "modules/lancer-weapon-fxray/soundfx/Axe_Hit.ogg",
     "jb2a.impact.blue.3",
 ]);
 
@@ -21,12 +21,12 @@ for (const target of targetTokens) {
             .missed(targetsMissed.has(target.id))
             .waitUntilFinished(-1200)
         .sound()
-            .file("modules/lancer-weapon-fx/soundfx/Axe_swing.ogg")
+            .file("modules/lancer-weapon-fxray/soundfx/Axe_swing.ogg")
             .volume(game.modules.get("lancer-weapon-fx").api.getEffectVolume(0.7));
 
     sequence
         .sound()
-            .file("modules/lancer-weapon-fx/soundfx/Axe_Hit.ogg")
+            .file("modules/lancer-weapon-fxray/soundfx/Axe_Hit.ogg")
             .playIf(!targetsMissed.has(target.id))
             .delay(275)
             .volume(game.modules.get("lancer-weapon-fx").api.getEffectVolume(0.7));

@@ -1,9 +1,9 @@
 const { targetsMissed, targetTokens, sourceToken } = game.modules.get("lancer-weapon-fx").api.getMacroVariables(this);
 
 await Sequencer.Preloader.preloadForClients([
-    "modules/lancer-weapon-fx/soundfx/BR_Fire.ogg",
+    "modules/lancer-weapon-fxray/soundfx/BR_Fire.ogg",
     "jb2a.bullet.03.blue",
-    "modules/lancer-weapon-fx/soundfx/KineticImpact.ogg",
+    "modules/lancer-weapon-fxray/soundfx/KineticImpact.ogg",
     "jb2a.impact.orange.0",
 ]);
 
@@ -13,7 +13,7 @@ for (let i = 0; i < targetTokens.length; i++) {
     let target = targetTokens[i];
     sequence
         .sound()
-            .file("modules/lancer-weapon-fx/soundfx/BR_Fire.ogg")
+            .file("modules/lancer-weapon-fxray/soundfx/BR_Fire.ogg")
             .volume(game.modules.get("lancer-weapon-fx").api.getEffectVolume(0.5))
             .duration(933)
             .delay(500)
@@ -30,7 +30,7 @@ for (let i = 0; i < targetTokens.length; i++) {
             .delay(500)
             .waitUntilFinished(-600)
         .sound()
-            .file("modules/lancer-weapon-fx/soundfx/KineticImpact.ogg")
+            .file("modules/lancer-weapon-fxray/soundfx/KineticImpact.ogg")
             .playIf(!targetsMissed.has(target.id))
             .volume(game.modules.get("lancer-weapon-fx").api.getEffectVolume(0.5))
         .effect()
@@ -45,7 +45,7 @@ for (let i = 0; i < targetTokens.length; i++) {
             .center();
     sequence
         .sound()
-            .file("modules/lancer-weapon-fx/soundfx/BR_Fire.ogg")
+            .file("modules/lancer-weapon-fxray/soundfx/BR_Fire.ogg")
             .volume(game.modules.get("lancer-weapon-fx").api.getEffectVolume(0.5))
             .duration(933)
             .delay(500)
@@ -61,7 +61,7 @@ for (let i = 0; i < targetTokens.length; i++) {
             .delay(500)
             .waitUntilFinished(-600)
         .sound()
-            .file("modules/lancer-weapon-fx/soundfx/KineticImpact.ogg")
+            .file("modules/lancer-weapon-fxray/soundfx/KineticImpact.ogg")
             .playIf(!targetsMissed.has(target.id))
             .volume(game.modules.get("lancer-weapon-fx").api.getEffectVolume(0.5))
         .effect()

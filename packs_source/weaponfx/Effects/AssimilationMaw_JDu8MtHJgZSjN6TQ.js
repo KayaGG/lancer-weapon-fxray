@@ -1,9 +1,9 @@
 const { targetsMissed, targetTokens, sourceToken } = game.modules.get("lancer-weapon-fx").api.getMacroVariables(this);
 
 await Sequencer.Preloader.preloadForClients([
-    "modules/lancer-weapon-fx/soundfx/Melee.ogg",
+    "modules/lancer-weapon-fxray/soundfx/Melee.ogg",
     "jb2a.bite",
-    "modules/lancer-weapon-fx/soundfx/HeavyImpact.ogg",
+    "modules/lancer-weapon-fxray/soundfx/HeavyImpact.ogg",
     "jb2a.divine_smite.caster.blueyellow",
 ]);
 
@@ -12,7 +12,7 @@ let sequence = new Sequence();
 for (const target of targetTokens) {
     sequence
         .sound()
-            .file("modules/lancer-weapon-fx/soundfx/Melee.ogg")
+            .file("modules/lancer-weapon-fxray/soundfx/Melee.ogg")
             .volume(game.modules.get("lancer-weapon-fx").api.getEffectVolume(0.5));
     sequence
         .effect()
@@ -27,7 +27,7 @@ for (const target of targetTokens) {
             .waitUntilFinished(targetsMissed.has(target.id) ? 0 : -1000);
     sequence
         .sound()
-            .file("modules/lancer-weapon-fx/soundfx/HeavyImpact.ogg")
+            .file("modules/lancer-weapon-fxray/soundfx/HeavyImpact.ogg")
             .playIf(!targetsMissed.has(target.id))
             .volume(game.modules.get("lancer-weapon-fx").api.getEffectVolume(0.5));
     sequence

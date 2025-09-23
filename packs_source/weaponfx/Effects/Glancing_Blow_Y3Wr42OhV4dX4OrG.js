@@ -1,8 +1,8 @@
 const { sourceToken } = game.modules.get("lancer-weapon-fx").api.getMacroVariables(this);
 
 await Sequencer.Preloader.preloadForClients([
-    "modules/lancer-weapon-fx/advisories/GlancingBlow.svg",
-    "modules/lancer-weapon-fx/soundfx/ricochet.ogg",
+    "modules/lancer-weapon-fxray/advisories/GlancingBlow.svg",
+    "modules/lancer-weapon-fxray/soundfx/ricochet.ogg",
     "jb2a.impact.005.orange",
 ]);
 
@@ -16,7 +16,7 @@ new Sequence()
 
     .effect()
         .xray()
-        .file("modules/lancer-weapon-fx/advisories/GlancingBlow.svg")
+        .file("modules/lancer-weapon-fxray/advisories/GlancingBlow.svg")
         .attachTo(sourceToken, { align: "bottom-left", edge: "inner" })
         .animateProperty("sprite", "position.y", { from: 0, to: 1, duration: 3500, gridUnits: true, fromEnd: true })
         .scaleIn(0.01, 500)
@@ -28,7 +28,7 @@ new Sequence()
         .fadeOut(800, { delay: -1200 })
         .waitUntilFinished(-4500)
     .sound()
-        .file("modules/lancer-weapon-fx/soundfx/ricochet.ogg")
+        .file("modules/lancer-weapon-fxray/soundfx/ricochet.ogg")
         .volume(game.modules.get("lancer-weapon-fx").api.getEffectVolume(0.4))
     .effect()
         .xray()

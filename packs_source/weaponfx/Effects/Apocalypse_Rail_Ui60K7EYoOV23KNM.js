@@ -3,22 +3,22 @@ const { targetsMissed, targetTokens, sourceToken } = game.modules.get("lancer-we
 const target = game.modules.get("lancer-weapon-fx").api.getTargetLocationsFromTokenGroup(targetTokens, 1)[0];
 
 await Sequencer.Preloader.preloadForClients([
-    "modules/lancer-weapon-fx/soundfx/APR2_Load.ogg",
-    "modules/lancer-weapon-fx/soundfx/APR2_Fire.ogg",
+    "modules/lancer-weapon-fxray/soundfx/APR2_Load.ogg",
+    "modules/lancer-weapon-fxray/soundfx/APR2_Fire.ogg",
     "jb2a.bullet.01.orange",
     "jb2a.fireball.explosion.orange",
-    "modules/lancer-weapon-fx/soundfx/APR2_Impact.ogg",
+    "modules/lancer-weapon-fxray/soundfx/APR2_Impact.ogg",
 ]);
 
 let sequence = new Sequence()
 
     .sound()
-        .file("modules/lancer-weapon-fx/soundfx/APR2_Load.ogg")
+        .file("modules/lancer-weapon-fxray/soundfx/APR2_Load.ogg")
         .volume(game.modules.get("lancer-weapon-fx").api.getEffectVolume(0.5))
         .waitUntilFinished()
 
     .sound()
-        .file("modules/lancer-weapon-fx/soundfx/APR2_Fire.ogg")
+        .file("modules/lancer-weapon-fxray/soundfx/APR2_Fire.ogg")
         .volume(game.modules.get("lancer-weapon-fx").api.getEffectVolume(0.5))
 
     .effect()
@@ -37,7 +37,7 @@ sequence
         .zIndex(1)
 
     .sound()
-        .file("modules/lancer-weapon-fx/soundfx/APR2_Impact.ogg")
+        .file("modules/lancer-weapon-fxray/soundfx/APR2_Impact.ogg")
         .volume(game.modules.get("lancer-weapon-fx").api.getEffectVolume(0.5));
 
 sequence.play();

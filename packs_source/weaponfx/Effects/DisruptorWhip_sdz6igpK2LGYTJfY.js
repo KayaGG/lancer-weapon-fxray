@@ -2,8 +2,8 @@ const { targetsMissed, targetTokens, sourceToken } = game.modules.get("lancer-we
 
 await Sequencer.Preloader.preloadForClients([
     "jb2a.divine_smite.target.blueyellow",
-    "modules/lancer-weapon-fx/soundfx/bladeswing.ogg",
-    "modules/lancer-weapon-fx/soundfx/bladehit.ogg",
+    "modules/lancer-weapon-fxray/soundfx/bladeswing.ogg",
+    "modules/lancer-weapon-fxray/soundfx/bladehit.ogg",
     "jb2a.extras.tmfx.outpulse.circle.01.normal",
     "jb2a.impact.001",
 ]);
@@ -25,14 +25,14 @@ for (const target of targetTokens) {
             .rotate(90)
             .delay(500)
         .sound()
-            .file("modules/lancer-weapon-fx/soundfx/bladeswing.ogg")
+            .file("modules/lancer-weapon-fxray/soundfx/bladeswing.ogg")
             .delay(500)
             .volume(game.modules.get("lancer-weapon-fx").api.getEffectVolume(0.7));
 
     if (!targetsMissed.has(target.id)) {
         sequence
             .sound()
-                .file("modules/lancer-weapon-fx/soundfx/bladehit.ogg")
+                .file("modules/lancer-weapon-fxray/soundfx/bladehit.ogg")
                 .delay(800)
                 .volume(game.modules.get("lancer-weapon-fx").api.getEffectVolume(0.7));
         sequence

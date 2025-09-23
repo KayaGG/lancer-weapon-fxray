@@ -1,8 +1,8 @@
 const { targetsMissed, targetTokens, sourceToken } = game.modules.get("lancer-weapon-fx").api.getMacroVariables(this);
 
 await Sequencer.Preloader.preloadForClients([
-    "modules/lancer-weapon-fx/soundfx/Annihilator_Charge.ogg",
-    "modules/lancer-weapon-fx/soundfx/Plasma_Fire.ogg",
+    "modules/lancer-weapon-fxray/soundfx/Annihilator_Charge.ogg",
+    "modules/lancer-weapon-fxray/soundfx/Plasma_Fire.ogg",
     "jb2a.lasershot.green",
     "jb2a.impact.orange.0",
 ]);
@@ -12,11 +12,11 @@ let sequence = new Sequence();
 for (const target of targetTokens) {
     sequence
         .sound()
-            .file("modules/lancer-weapon-fx/soundfx/Annihilator_Charge.ogg")
+            .file("modules/lancer-weapon-fxray/soundfx/Annihilator_Charge.ogg")
             .volume(game.modules.get("lancer-weapon-fx").api.getEffectVolume(0.5))
             .waitUntilFinished(-1200)
         .sound()
-            .file("modules/lancer-weapon-fx/soundfx/Plasma_Fire.ogg")
+            .file("modules/lancer-weapon-fxray/soundfx/Plasma_Fire.ogg")
             .volume(game.modules.get("lancer-weapon-fx").api.getEffectVolume(0.5))
             .repeats(2, 225)
 

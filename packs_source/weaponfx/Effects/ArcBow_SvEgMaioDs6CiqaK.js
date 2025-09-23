@@ -47,8 +47,8 @@ const repeatImpactAnimationForEachTarget = function (sequence, targets) {
 
 await Sequencer.Preloader.preloadForClients([
     "jb2a.chain_lightning.secondary.blue",
-    "modules/lancer-weapon-fx/soundfx/ArcBowFire.ogg",
-    "modules/lancer-weapon-fx/soundfx/veil_rifle.ogg",
+    "modules/lancer-weapon-fxray/soundfx/ArcBowFire.ogg",
+    "modules/lancer-weapon-fxray/soundfx/veil_rifle.ogg",
     "jb2a.arrow.physical.blue",
     "jb2a.chain_lightning.primary.blue",
 ]);
@@ -57,12 +57,12 @@ let sequence = new Sequence();
 
 sequence
     .sound()
-        .file("modules/lancer-weapon-fx/soundfx/ArcBowFire.ogg")
+        .file("modules/lancer-weapon-fxray/soundfx/ArcBowFire.ogg")
         .delay(800)
         .volume(game.modules.get("lancer-weapon-fx").api.getEffectVolume(0.5));
 sequence
     .sound()
-        .file("modules/lancer-weapon-fx/soundfx/veil_rifle.ogg")
+        .file("modules/lancer-weapon-fxray/soundfx/veil_rifle.ogg")
         .delay(1200)
         .volume(game.modules.get("lancer-weapon-fx").api.getEffectVolume(0.5));
 sequence

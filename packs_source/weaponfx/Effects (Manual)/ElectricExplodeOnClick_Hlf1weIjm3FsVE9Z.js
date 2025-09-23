@@ -4,7 +4,7 @@
 await Sequencer.Preloader.preloadForClients([
     "jb2a.explosion.02.blue", 
     "jb2a.thunderwave.center.blue",
-    "modules/lancer-weapon-fx/soundfx/AirBurst.ogg"
+    "modules/lancer-weapon-fxray/soundfx/AirBurst.ogg"
 ]);
 
 // Create and add the preview icon to the canvas
@@ -55,6 +55,6 @@ canvas.stage.on('click', async (event) => {
     new Sequence()
         .effect().xray().file("jb2a.explosion.02.blue").atLocation({ x: snappedPos.x - gridSize / 4, y: snappedPos.y - gridSize / 6 }).delay(500)
         .effect().xray().file("jb2a.thunderwave.center.blue").atLocation({ x: snappedPos.x - gridSize / 4, y: snappedPos.y - gridSize / 6 }).scale(0.6).delay(600)
-        .sound("modules/lancer-weapon-fx/soundfx/AirBurst.ogg").volume(game.modules.get("lancer-weapon-fx").api.getEffectVolume(0.7)).delay(500)
+        .sound("modules/lancer-weapon-fxray/soundfx/AirBurst.ogg").volume(game.modules.get("lancer-weapon-fx").api.getEffectVolume(0.7)).delay(500)
         .play();
 });

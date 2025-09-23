@@ -2,8 +2,8 @@ const { targetsMissed, targetTokens, sourceToken } = game.modules.get("lancer-we
 
 await Sequencer.Preloader.preloadForClients([
     "jb2a.melee_attack.03.trail.greatsword",
-    "modules/lancer-weapon-fx/soundfx/bladeswing.ogg",
-    "modules/lancer-weapon-fx/soundfx/bladehit.ogg",
+    "modules/lancer-weapon-fxray/soundfx/bladeswing.ogg",
+    "modules/lancer-weapon-fxray/soundfx/bladehit.ogg",
     "jb2a.impact.blue",
 ]);
 
@@ -24,7 +24,7 @@ for (const target of targetTokens) {
 
     sequence
         .sound()
-            .file("modules/lancer-weapon-fx/soundfx/bladeswing.ogg")
+            .file("modules/lancer-weapon-fxray/soundfx/bladeswing.ogg")
             .delay(500)
             .volume(game.modules.get("lancer-weapon-fx").api.getEffectVolume(0.7))
             .waitUntilFinished(-1350);
@@ -32,7 +32,7 @@ for (const target of targetTokens) {
     if (!targetsMissed.has(target.id)) {
         sequence
             .sound()
-                .file("modules/lancer-weapon-fx/soundfx/bladehit.ogg")
+                .file("modules/lancer-weapon-fxray/soundfx/bladehit.ogg")
                 .volume(game.modules.get("lancer-weapon-fx").api.getEffectVolume(0.7));
 
         sequence.effect().file("jb2a.impact.blue").scaleToObject(2).atLocation(target).waitUntilFinished(-1500);

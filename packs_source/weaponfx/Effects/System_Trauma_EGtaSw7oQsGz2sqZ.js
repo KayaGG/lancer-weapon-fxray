@@ -2,7 +2,7 @@ const { sourceToken } = game.modules.get("lancer-weapon-fx").api.getMacroVariabl
 
 await Sequencer.Preloader.preloadForClients([
     "jb2a.explosion_side.01.orange.1",
-    "modules/lancer-weapon-fx/soundfx/DirectHitExplosion1.ogg",
+    "modules/lancer-weapon-fxray/soundfx/DirectHitExplosion1.ogg",
     "jb2a.impact.005.orange",
     "jb2a.explosion.side_fracture.flask.01.0",
 ]);
@@ -33,7 +33,7 @@ new Sequence()
         .repeats(3, 125)
         .opacity(0.8)
     .sound()
-        .file("modules/lancer-weapon-fx/soundfx/DirectHitExplosion1.ogg")
+        .file("modules/lancer-weapon-fxray/soundfx/DirectHitExplosion1.ogg")
         .volume(game.modules.get("lancer-weapon-fx").api.getEffectVolume(0.5))
         .repeats(3, 125)
     .effect()

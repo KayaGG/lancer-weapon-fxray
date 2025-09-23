@@ -7,12 +7,12 @@ const pivoty = token.document.flags["hex-size-support"]?.pivoty || 0;
 const ipivoty = -pivoty;
 
 await Sequencer.Preloader.preloadForClients([
-    "modules/lancer-weapon-fx/soundfx/dramaticSparkles.ogg",
-    "modules/lancer-weapon-fx/soundfx/ReactorWarning.ogg",
-    "modules/lancer-weapon-fx/advisories/EmergencyShunt.svg",
+    "modules/lancer-weapon-fxray/soundfx/dramaticSparkles.ogg",
+    "modules/lancer-weapon-fxray/soundfx/ReactorWarning.ogg",
+    "modules/lancer-weapon-fxray/advisories/EmergencyShunt.svg",
     "jb2a.smoke.plumes.01.grey",
-    "modules/lancer-weapon-fx/soundfx/NexusConfirm.ogg",
-    "modules/lancer-weapon-fx/soundfx/EmergencyShunt.ogg",
+    "modules/lancer-weapon-fxray/soundfx/NexusConfirm.ogg",
+    "modules/lancer-weapon-fxray/soundfx/EmergencyShunt.ogg",
     "jb2a.moonbeam.01.loop",
     "jb2a.smoke.puff.ring.01.white.0",
     "jb2a.smoke.puff.ring.01.white.1",
@@ -21,10 +21,10 @@ await Sequencer.Preloader.preloadForClients([
 new Sequence()
 
     .sound()
-        .file("modules/lancer-weapon-fx/soundfx/dramaticSparkles.ogg")
+        .file("modules/lancer-weapon-fxray/soundfx/dramaticSparkles.ogg")
         .volume(game.modules.get("lancer-weapon-fx").api.getEffectVolume(0.2))
     .sound()
-        .file("modules/lancer-weapon-fx/soundfx/ReactorWarning.ogg")
+        .file("modules/lancer-weapon-fxray/soundfx/ReactorWarning.ogg")
         .volume(game.modules.get("lancer-weapon-fx").api.getEffectVolume(0.5))
         .repeats(2, 1000)
     .effect()
@@ -40,7 +40,7 @@ new Sequence()
         .mask(sourceToken)
     .effect()
         .xray()
-        .file("modules/lancer-weapon-fx/advisories/EmergencyShunt.svg")
+        .file("modules/lancer-weapon-fxray/advisories/EmergencyShunt.svg")
         .attachTo(sourceToken, { align: "bottom-left", edge: "inner", offset: { y: 0.1 }, gridUnits: true })
         .animateProperty("sprite", "position.y", { from: 0, to: 1, duration: 3500, gridUnits: true, fromEnd: true })
         .scaleIn(0.01, 500)
@@ -86,11 +86,11 @@ new Sequence()
         .delay(200)
         .belowTokens()
     .sound()
-        .file("modules/lancer-weapon-fx/soundfx/EmergencyShunt.ogg")
+        .file("modules/lancer-weapon-fxray/soundfx/EmergencyShunt.ogg")
         .volume(game.modules.get("lancer-weapon-fx").api.getEffectVolume(0.7))
         .waitUntilFinished(-1800)
     .sound()
-        .file("modules/lancer-weapon-fx/soundfx/NexusConfirm.ogg")
+        .file("modules/lancer-weapon-fxray/soundfx/NexusConfirm.ogg")
         .volume(game.modules.get("lancer-weapon-fx").api.getEffectVolume(0.5))
 
     .play();

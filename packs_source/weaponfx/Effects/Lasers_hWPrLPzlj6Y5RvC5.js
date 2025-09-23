@@ -3,7 +3,7 @@ const { targetsMissed, targetTokens, sourceToken } = game.modules.get("lancer-we
 const random = Sequencer.Helpers.random_float_between(200, 300);
 
 await Sequencer.Preloader.preloadForClients([
-    "modules/lancer-weapon-fx/soundfx/Laser_Fire.ogg",
+    "modules/lancer-weapon-fxray/soundfx/Laser_Fire.ogg",
     "jb2a.impact.blue.2",
     "jb2a.lasershot.blue",
 ]);
@@ -14,7 +14,7 @@ for (let i = 0; i < targetTokens.length; i++) {
     let target = targetTokens[i];
     sequence
         .sound()
-            .file("modules/lancer-weapon-fx/soundfx/Laser_Fire.ogg")
+            .file("modules/lancer-weapon-fxray/soundfx/Laser_Fire.ogg")
             .volume(game.modules.get("lancer-weapon-fx").api.getEffectVolume(0.5))
             .duration(633)
             .repeats(3, random);

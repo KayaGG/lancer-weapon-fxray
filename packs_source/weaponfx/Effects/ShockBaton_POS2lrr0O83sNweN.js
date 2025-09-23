@@ -2,8 +2,8 @@ const { targetsMissed, targetTokens, sourceToken } = game.modules.get("lancer-we
 
 await Sequencer.Preloader.preloadForClients([
     "jb2a.melee_attack.01.magic_sword.yellow",
-    "modules/lancer-weapon-fx/soundfx/Axe_swing.ogg",
-    "modules/lancer-weapon-fx/soundfx/Melee.ogg",
+    "modules/lancer-weapon-fxray/soundfx/Axe_swing.ogg",
+    "modules/lancer-weapon-fxray/soundfx/Melee.ogg",
     "jb2a.impact.blue.2",
     "jb2a.static_electricity.03",
 ]);
@@ -24,13 +24,13 @@ for (const target of targetTokens) {
             .missed(targetsMissed.has(target.id));
     sequence
         .sound()
-            .file("modules/lancer-weapon-fx/soundfx/Axe_swing.ogg")
+            .file("modules/lancer-weapon-fxray/soundfx/Axe_swing.ogg")
             .volume(game.modules.get("lancer-weapon-fx").api.getEffectVolume(0.5))
             .waitUntilFinished(-1450);
 
     sequence
         .sound()
-            .file("modules/lancer-weapon-fx/soundfx/Melee.ogg")
+            .file("modules/lancer-weapon-fxray/soundfx/Melee.ogg")
             .playIf(!targetsMissed.has(target.id))
             .volume(game.modules.get("lancer-weapon-fx").api.getEffectVolume(0.7));
     sequence

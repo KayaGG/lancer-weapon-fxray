@@ -2,9 +2,9 @@
     "_id": "JRAC43fdq4sRWQl8",
     "name": "DefaultMelee",
     "type": "script",
-    "img": "modules/lancer-weapon-fx/icons/mailed-fist.png",
+    "img": "modules/lancer-weapon-fxray/icons/mailed-fist.png",
     "scope": "global",
     "folder": "Qf6H7pepYZi6Oa6S",
     "_key": "!macros!JRAC43fdq4sRWQl8",
-    "command_source": "packs_source/weaponfx/Effects/DefaultMelee_JRAC43fdq4sRWQl8.js"
+    "command_source": "packs_source/weaponfxray/Effects/DefaultMelee_JRAC43fdq4sRWQl8.js"
 }

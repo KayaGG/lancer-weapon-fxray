@@ -2,9 +2,9 @@
     "_id": "R006179gUEan7xqn",
     "name": "Assault Rifle",
     "type": "script",
-    "img": "modules/lancer-weapon-fx/icons/ak47.png",
+    "img": "modules/lancer-weapon-fxray/icons/ak47.png",
     "scope": "global",
     "folder": "Qf6H7pepYZi6Oa6S",
     "_key": "!macros!R006179gUEan7xqn",
-    "command_source": "packs_source/weaponfx/Effects/Assault_Rifle_R006179gUEan7xqn.js"
+    "command_source": "packs_source/weaponfxray/Effects/Assault_Rifle_R006179gUEan7xqn.js"
 }

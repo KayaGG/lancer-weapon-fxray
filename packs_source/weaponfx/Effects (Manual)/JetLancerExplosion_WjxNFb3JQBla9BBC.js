@@ -1,18 +1,18 @@
 const { targetsMissed, targetTokens, sourceToken } = game.modules.get("lancer-weapon-fx").api.getMacroVariables(this);
 
 await Sequencer.Preloader.preloadForClients([
-    "modules/lancer-weapon-fx/soundfx/dramaticSparkles.ogg",
-    "modules/lancer-weapon-fx/soundfx/jetlancerSound.ogg",
-    "modules/lancer-weapon-fx/video/jetlancer_explosion_1000.webm",
-    "modules/lancer-weapon-fx/sprites/jetlancer_explosion_white_bg.png",
-    "modules/lancer-weapon-fx/sprites/RETROGRADE-crater.png",
+    "modules/lancer-weapon-fxray/soundfx/dramaticSparkles.ogg",
+    "modules/lancer-weapon-fxray/soundfx/jetlancerSound.ogg",
+    "modules/lancer-weapon-fxray/video/jetlancer_explosion_1000.webm",
+    "modules/lancer-weapon-fxray/sprites/jetlancer_explosion_white_bg.png",
+    "modules/lancer-weapon-fxray/sprites/RETROGRADE-crater.png",
 ]);
 
 let sequence = new Sequence();
 
 new Sequence()
 
-    .sound("modules/lancer-weapon-fx/soundfx/dramaticSparkles.ogg")
+    .sound("modules/lancer-weapon-fxray/soundfx/dramaticSparkles.ogg")
         .fadeInAudio(4000)
         .volume(0.3)
         .duration(5000)
@@ -29,8 +29,8 @@ new Sequence()
         .atLocation(sourceToken)
         .duration(100)
         .scale(2)
-    .sound("modules/lancer-weapon-fx/soundfx/jetlancerSound.ogg")
-    .effect("modules/lancer-weapon-fx/video/jetlancer_explosion_1000.webm")
+    .sound("modules/lancer-weapon-fxray/soundfx/jetlancerSound.ogg")
+    .effect("modules/lancer-weapon-fxray/video/jetlancer_explosion_1000.webm")
         .aboveInterface()
         .atLocation(sourceToken)
         .scale(1)
@@ -43,7 +43,7 @@ new Sequence()
     })
     .thenDo(remainsAftermath)
     .waitUntilFinished()
-    .effect("modules/lancer-weapon-fx/sprites/jetlancer_explosion_white_bg.png")
+    .effect("modules/lancer-weapon-fxray/sprites/jetlancer_explosion_white_bg.png")
         .delay(3600)
         .aboveInterface()
         .atLocation(sourceToken)
@@ -59,7 +59,7 @@ function remainsAftermath() {
     canvas.scene.createEmbeddedDocuments("Tile", [
         {
             texture: {
-                src: "modules/lancer-weapon-fx/sprites/RETROGRADE-crater.png",
+                src: "modules/lancer-weapon-fxray/sprites/RETROGRADE-crater.png",
             },
             x: token.document.x - canvas.dimensions.size,
             y: token.document.y - (canvas.dimensions.size + canvas.dimensions.size / 2),

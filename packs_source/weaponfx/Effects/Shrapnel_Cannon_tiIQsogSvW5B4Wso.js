@@ -15,19 +15,19 @@ const backBlast = {
 };
 
 await Sequencer.Preloader.preloadForClients([
-    "modules/lancer-weapon-fx/soundfx/Missile_Launch.ogg",
+    "modules/lancer-weapon-fxray/soundfx/Missile_Launch.ogg",
     "jb2a.bullet.01.orange",
     "jb2a.explosion.08",
-    "modules/lancer-weapon-fx/soundfx/Flechette.ogg",
+    "modules/lancer-weapon-fxray/soundfx/Flechette.ogg",
     "jb2a.bullet.02.orange",
     "jb2a.explosion_side.01",
-    "modules/lancer-weapon-fx/soundfx/Missile_Impact.ogg",
+    "modules/lancer-weapon-fxray/soundfx/Missile_Impact.ogg",
 ]);
 
 let sequence = new Sequence()
 
     .sound()
-        .file("modules/lancer-weapon-fx/soundfx/Missile_Launch.ogg")
+        .file("modules/lancer-weapon-fxray/soundfx/Missile_Launch.ogg")
         .volume(game.modules.get("lancer-weapon-fx").api.getEffectVolume(0.5));
 sequence
     .effect()
@@ -44,7 +44,7 @@ sequence
         .scale(0.8)
         .zIndex(1)
     .sound()
-        .file("modules/lancer-weapon-fx/soundfx/Flechette.ogg")
+        .file("modules/lancer-weapon-fxray/soundfx/Flechette.ogg")
         .volume(game.modules.get("lancer-weapon-fx").api.getEffectVolume(0.5));
     sequence.effect()
         .file("jb2a.bullet.02.orange")
@@ -77,7 +77,7 @@ for (let i = 0; i < targetTokens.length; i++) {
             .center()
             .delay(450)
         .sound()
-            .file("modules/lancer-weapon-fx/soundfx/Missile_Impact.ogg")
+            .file("modules/lancer-weapon-fxray/soundfx/Missile_Impact.ogg")
             .playIf(!targetsMissed.has(target.id))
             .volume(game.modules.get("lancer-weapon-fx").api.getEffectVolume(0.5))
             .delay(450)

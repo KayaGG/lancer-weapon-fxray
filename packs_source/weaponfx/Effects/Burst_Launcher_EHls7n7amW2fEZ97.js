@@ -3,16 +3,16 @@ const { targetsMissed, targetTokens, sourceToken } = game.modules.get("lancer-we
 const target = targetTokens[0];
 
 await Sequencer.Preloader.preloadForClients([
-    "modules/lancer-weapon-fx/soundfx/Autopod_Fire.ogg",
+    "modules/lancer-weapon-fxray/soundfx/Autopod_Fire.ogg",
     "jb2a.lightning_ball.blue",
-    "modules/lancer-weapon-fx/soundfx/AirBurst.ogg",
+    "modules/lancer-weapon-fxray/soundfx/AirBurst.ogg",
     "jb2a.explosion.02.blue",
 ]);
 
 let sequence = new Sequence()
 
     .sound()
-        .file("modules/lancer-weapon-fx/soundfx/Autopod_Fire.ogg")
+        .file("modules/lancer-weapon-fxray/soundfx/Autopod_Fire.ogg")
         .volume(game.modules.get("lancer-weapon-fx").api.getEffectVolume(0.7))
     .effect()
         .xray()
@@ -26,7 +26,7 @@ let sequence = new Sequence()
 
 sequence
     .sound()
-        .file("modules/lancer-weapon-fx/soundfx/AirBurst.ogg")
+        .file("modules/lancer-weapon-fxray/soundfx/AirBurst.ogg")
         .playIf(!targetsMissed.has(target.id))
         .volume(game.modules.get("lancer-weapon-fx").api.getEffectVolume(0.5))
     .effect()

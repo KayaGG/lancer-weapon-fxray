@@ -10,15 +10,15 @@ const overcharge = sourceToken.actor.system.overcharge;
 
 let svgFile;
 if (overcharge === 0 || overcharge === 1) {
-    svgFile = "modules/lancer-weapon-fx/advisories/OverchargeYellow.svg";
+    svgFile = "modules/lancer-weapon-fxray/advisories/OverchargeYellow.svg";
 } else if (overcharge === 2) {
-    svgFile = "modules/lancer-weapon-fx/advisories/OverchargeOrange.svg";
+    svgFile = "modules/lancer-weapon-fxray/advisories/OverchargeOrange.svg";
 } else {
-    svgFile = "modules/lancer-weapon-fx/advisories/OverchargeRed.svg";
+    svgFile = "modules/lancer-weapon-fxray/advisories/OverchargeRed.svg";
 }
 
 await Sequencer.Preloader.preloadForClients([
-    "modules/lancer-weapon-fx/soundfx/Overcharge.ogg",
+    "modules/lancer-weapon-fxray/soundfx/Overcharge.ogg",
     "jb2a.static_electricity.02.blue",
     "jb2a.template_circle.out_pulse.02.burst.bluewhite",
     "jb2a.static_electricity.03",
@@ -40,7 +40,7 @@ let sequence = new Sequence()
         .fadeIn(400)
         .fadeOut(800)
     .sound()
-        .file("modules/lancer-weapon-fx/soundfx/Overcharge.ogg")
+        .file("modules/lancer-weapon-fxray/soundfx/Overcharge.ogg")
         .volume(game.modules.get("lancer-weapon-fx").api.getEffectVolume(0.5))
         .waitUntilFinished(-2700)
     .effect()

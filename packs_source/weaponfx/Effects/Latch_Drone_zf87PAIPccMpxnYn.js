@@ -1,9 +1,9 @@
 const { targetsMissed, targetTokens, sourceToken } = game.modules.get("lancer-weapon-fx").api.getMacroVariables(this);
 
 await Sequencer.Preloader.preloadForClients([
-    "modules/lancer-weapon-fx/sprites/LatchDrone.png",
-    "modules/lancer-weapon-fx/soundfx/Mortar_Launch.ogg",
-    "modules/lancer-weapon-fx/soundfx/Stabilize.ogg",
+    "modules/lancer-weapon-fxray/sprites/LatchDrone.png",
+    "modules/lancer-weapon-fxray/soundfx/Mortar_Launch.ogg",
+    "modules/lancer-weapon-fxray/soundfx/Stabilize.ogg",
     "jb2a.healing_generic.400px.green",
 ]);
 
@@ -13,7 +13,7 @@ for (const target of targetTokens) {
     sequence
         .effect()
             .xray()
-            .file("modules/lancer-weapon-fx/sprites/LatchDrone.png")
+            .file("modules/lancer-weapon-fxray/sprites/LatchDrone.png")
             .rotate(260)
             .atLocation(sourceToken)
             .rotateTowards(target)
@@ -22,13 +22,13 @@ for (const target of targetTokens) {
             .moveSpeed(1200);
     sequence
         .sound()
-            .file("modules/lancer-weapon-fx/soundfx/Mortar_Launch.ogg")
+            .file("modules/lancer-weapon-fxray/soundfx/Mortar_Launch.ogg")
             .volume(game.modules.get("lancer-weapon-fx").api.getEffectVolume(0.7))
             .waitUntilFinished();
     if (!targetsMissed.has(target.id)) {
         sequence
             .sound()
-                .file("modules/lancer-weapon-fx/soundfx/Stabilize.ogg")
+                .file("modules/lancer-weapon-fxray/soundfx/Stabilize.ogg")
                 .volume(game.modules.get("lancer-weapon-fx").api.getEffectVolume(0.9))
                 .delay(200)
             .effect()

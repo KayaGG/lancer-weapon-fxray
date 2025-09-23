@@ -3,16 +3,16 @@ const { targetsMissed, targetTokens, sourceToken } = game.modules.get("lancer-we
 const target = targetTokens[0];
 
 await Sequencer.Preloader.preloadForClients([
-    "modules/lancer-weapon-fx/soundfx/AMR_Fire.ogg",
+    "modules/lancer-weapon-fxray/soundfx/AMR_Fire.ogg",
     "jb2a.bullet.Snipe.blue",
     "jb2a.impact.orange.0",
-    "modules/lancer-weapon-fx/soundfx/AMR_Impact.ogg",
+    "modules/lancer-weapon-fxray/soundfx/AMR_Impact.ogg",
 ]);
 
 let sequence = new Sequence()
 
     .sound()
-        .file("modules/lancer-weapon-fx/soundfx/AMR_Fire.ogg")
+        .file("modules/lancer-weapon-fxray/soundfx/AMR_Fire.ogg")
         .volume(game.modules.get("lancer-weapon-fx").api.getEffectVolume(0.5))
     .effect()
         .xray()
@@ -32,7 +32,7 @@ if (!targetsMissed.has(target.id)) {
             .rotate(230)
             .center()
         .sound()
-            .file("modules/lancer-weapon-fx/soundfx/AMR_Impact.ogg")
+            .file("modules/lancer-weapon-fxray/soundfx/AMR_Impact.ogg")
             .volume(game.modules.get("lancer-weapon-fx").api.getEffectVolume(0.5));
 }
 

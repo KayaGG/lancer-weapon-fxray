@@ -1,7 +1,7 @@
 const { sourceToken } = game.modules.get("lancer-weapon-fx").api.getMacroVariables(this);
 
 await Sequencer.Preloader.preloadForClients([
-    "modules/lancer-weapon-fx/soundfx/Flechette.ogg",
+    "modules/lancer-weapon-fxray/soundfx/Flechette.ogg",
     "jb2a.explosion.04.blue",
     "jb2a.impact.yellow",
 ]);
@@ -9,7 +9,7 @@ await Sequencer.Preloader.preloadForClients([
 let sequence = new Sequence()
 
     .sound()
-        .file("modules/lancer-weapon-fx/soundfx/Flechette.ogg")
+        .file("modules/lancer-weapon-fxray/soundfx/Flechette.ogg")
         .volume(game.modules.get("lancer-weapon-fx").api.getEffectVolume(0.5))
     .effect()
         .xray()

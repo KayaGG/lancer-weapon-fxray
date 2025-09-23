@@ -18,7 +18,7 @@ const farthest = findFarthestTargetOfGroup(targetTokens);
 
 await Sequencer.Preloader.preloadForClients([
     "jb2a.bullet.Snipe.blue",
-    "modules/lancer-weapon-fx/soundfx/veil_rifle.ogg",
+    "modules/lancer-weapon-fxray/soundfx/veil_rifle.ogg",
 ]);
 
 let sequence = new Sequence();
@@ -36,7 +36,7 @@ for (const target of targetTokens) {
             .missed(targetsMissed.has(target.id));
     sequence
         .sound()
-            .file("modules/lancer-weapon-fx/soundfx/veil_rifle.ogg")
+            .file("modules/lancer-weapon-fxray/soundfx/veil_rifle.ogg")
             .volume(game.modules.get("lancer-weapon-fx").api.getEffectVolume(0.5));
 }
 sequence.play();

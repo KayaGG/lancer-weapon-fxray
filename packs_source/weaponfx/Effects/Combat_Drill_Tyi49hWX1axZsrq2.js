@@ -1,8 +1,8 @@
 const { targetsMissed, targetTokens, sourceToken } = game.modules.get("lancer-weapon-fx").api.getMacroVariables(this);
 
 await Sequencer.Preloader.preloadForClients([
-    "modules/lancer-weapon-fx/sprites/DRILL.png",
-    "modules/lancer-weapon-fx/soundfx/Autopod_Impact.ogg",
+    "modules/lancer-weapon-fxray/sprites/DRILL.png",
+    "modules/lancer-weapon-fxray/soundfx/Autopod_Impact.ogg",
     "jb2a.gust_of_wind.veryfast",
     "jb2a.impact.yellow",
 ]);
@@ -16,7 +16,7 @@ for (const target of targetTokens) {
     sequence
         .effect()
             .xray()
-            .file("modules/lancer-weapon-fx/sprites/DRILL.png")
+            .file("modules/lancer-weapon-fxray/sprites/DRILL.png")
             .scale(0.6)
             .filter("Glow", { color: 0xd7d23c })
             .atLocation(sourceToken)
@@ -29,7 +29,7 @@ for (const target of targetTokens) {
     if (!targetsMissed.has(target.id)) {
         sequence
             .sound()
-                .file("modules/lancer-weapon-fx/soundfx/Autopod_Impact.ogg")
+                .file("modules/lancer-weapon-fxray/soundfx/Autopod_Impact.ogg")
                 .volume(game.modules.get("lancer-weapon-fx").api.getEffectVolume(0.7))
                 .repeats(8, 125)
                 .delay(200)
@@ -53,7 +53,7 @@ for (const target of targetTokens) {
     } else {
         sequence
             .sound()
-                .file("modules/lancer-weapon-fx/soundfx/Autopod_Impact.ogg")
+                .file("modules/lancer-weapon-fxray/soundfx/Autopod_Impact.ogg")
                 .volume(game.modules.get("lancer-weapon-fx").api.getEffectVolume(0.7))
                 .repeats(2, 170)
                 .delay(200);

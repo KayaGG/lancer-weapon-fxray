@@ -2,8 +2,8 @@ const { targetsMissed, targetTokens, sourceToken } = game.modules.get("lancer-we
 
 await Sequencer.Preloader.preloadForClients([
     "jb2a.melee_generic.slash.01.orange",
-    "modules/lancer-weapon-fx/soundfx/bladeswing.ogg",
-    "modules/lancer-weapon-fx/soundfx/Mortar_Impact.ogg",
+    "modules/lancer-weapon-fxray/soundfx/bladeswing.ogg",
+    "modules/lancer-weapon-fxray/soundfx/Mortar_Impact.ogg",
     "jb2a.explosion.01",
     "jb2a.static_electricity.03.blue",
 ]);
@@ -23,14 +23,14 @@ for (const target of targetTokens) {
             .missed(targetsMissed.has(target.id));
     sequence
         .sound()
-            .file("modules/lancer-weapon-fx/soundfx/bladeswing.ogg")
+            .file("modules/lancer-weapon-fxray/soundfx/bladeswing.ogg")
             .volume(game.modules.get("lancer-weapon-fx").api.getEffectVolume(0.7))
             .delay(500)
             .waitUntilFinished(-1300);
     if (!targetsMissed.has(target.id)) {
         sequence
             .sound()
-                .file("modules/lancer-weapon-fx/soundfx/Mortar_Impact.ogg")
+                .file("modules/lancer-weapon-fxray/soundfx/Mortar_Impact.ogg")
                 .volume(game.modules.get("lancer-weapon-fx").api.getEffectVolume(0.7));
         sequence
             .effect()

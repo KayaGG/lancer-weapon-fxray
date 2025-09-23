@@ -1,11 +1,11 @@
 const { targetsMissed, targetTokens, sourceToken } = game.modules.get("lancer-weapon-fx").api.getMacroVariables(this);
 
 await Sequencer.Preloader.preloadForClients([
-    "modules/lancer-weapon-fx/soundfx/TechPrepare.ogg",
+    "modules/lancer-weapon-fxray/soundfx/TechPrepare.ogg",
     "jb2a.extras.tmfx.outpulse.circle.02.normal",
-    "modules/lancer-weapon-fx/soundfx/TechWarn.ogg",
+    "modules/lancer-weapon-fxray/soundfx/TechWarn.ogg",
     "jb2a.extras.tmfx.inpulse.circle.02.normal",
-    "modules/lancer-weapon-fx/soundfx/NexusConfirm.ogg",
+    "modules/lancer-weapon-fxray/soundfx/NexusConfirm.ogg",
     "jb2a.zoning.inward.circle.loop.bluegreen.01.01",
     "jb2a.static_electricity.03.blue",
 ]);
@@ -14,7 +14,7 @@ targetTokens.forEach(target => {
     let sequence = new Sequence()
 
         .sound()
-            .file("modules/lancer-weapon-fx/soundfx/TechPrepare.ogg")
+            .file("modules/lancer-weapon-fxray/soundfx/TechPrepare.ogg")
             .volume(game.modules.get("lancer-weapon-fx").api.getEffectVolume(0.7))
 
         .effect()
@@ -27,7 +27,7 @@ targetTokens.forEach(target => {
             .waitUntilFinished(-400)
 
         .sound()
-            .file("modules/lancer-weapon-fx/soundfx/TechWarn.ogg")
+            .file("modules/lancer-weapon-fxray/soundfx/TechWarn.ogg")
             .volume(game.modules.get("lancer-weapon-fx").api.getEffectVolume(0.7))
 
         .effect()
@@ -43,7 +43,7 @@ targetTokens.forEach(target => {
 
     sequence
         .sound()
-            .file("modules/lancer-weapon-fx/soundfx/NexusConfirm.ogg")
+            .file("modules/lancer-weapon-fxray/soundfx/NexusConfirm.ogg")
             .volume(game.modules.get("lancer-weapon-fx").api.getEffectVolume(0.5))
             .playIf(!targetsMissed.has(target.id))
         .effect()

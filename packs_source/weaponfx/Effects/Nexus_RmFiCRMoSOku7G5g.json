@@ -2,9 +2,9 @@
     "_id": "RmFiCRMoSOku7G5g",
     "name": "Nexus",
     "type": "script",
-    "img": "modules/lancer-weapon-fx/icons/nano-bot.png",
+    "img": "modules/lancer-weapon-fxray/icons/nano-bot.png",
     "scope": "global",
     "folder": "Qf6H7pepYZi6Oa6S",
     "_key": "!macros!RmFiCRMoSOku7G5g",
-    "command_source": "packs_source/weaponfx/Effects/Nexus_RmFiCRMoSOku7G5g.js"
+    "command_source": "packs_source/weaponfxray/Effects/Nexus_RmFiCRMoSOku7G5g.js"
 }

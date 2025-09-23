@@ -1,10 +1,10 @@
 const { targetsMissed, targetTokens, sourceToken } = game.modules.get("lancer-weapon-fx").api.getMacroVariables(this);
 
 await Sequencer.Preloader.preloadForClients([
-    "modules/lancer-weapon-fx/soundfx/shotgun_fire.ogg",
+    "modules/lancer-weapon-fxray/soundfx/shotgun_fire.ogg",
     "jb2a.bolt.physical.orange",
     "jb2a.explosion.01.orange",
-    "modules/lancer-weapon-fx/soundfx/Missile_Impact.ogg",
+    "modules/lancer-weapon-fxray/soundfx/Missile_Impact.ogg",
 ]);
 
 let sequence = new Sequence();
@@ -12,7 +12,7 @@ let sequence = new Sequence();
 for (const target of targetTokens) {
     sequence
         .sound()
-            .file("modules/lancer-weapon-fx/soundfx/shotgun_fire.ogg")
+            .file("modules/lancer-weapon-fxray/soundfx/shotgun_fire.ogg")
             .delay(200)
             .volume(game.modules.get("lancer-weapon-fx").api.getEffectVolume(0.5));
     sequence
@@ -33,7 +33,7 @@ for (const target of targetTokens) {
     if (!targetsMissed.has(target.id)) {
         sequence
             .sound()
-                .file("modules/lancer-weapon-fx/soundfx/Missile_Impact.ogg")
+                .file("modules/lancer-weapon-fxray/soundfx/Missile_Impact.ogg")
                 .delay(50)
                 .volume(game.modules.get("lancer-weapon-fx").api.getEffectVolume(0.5));
     }

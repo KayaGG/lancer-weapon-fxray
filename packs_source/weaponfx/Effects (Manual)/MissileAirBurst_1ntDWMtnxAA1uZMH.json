@@ -1,10 +1,10 @@
 {
     "_id": "1ntDWMtnxAA1uZMH",
     "name": "MissileAirBurst",
-    "img": "modules/lancer-weapon-fx/icons/incoming-rocket.png",
+    "img": "modules/lancer-weapon-fxray/icons/incoming-rocket.png",
     "type": "script",
     "scope": "global",
     "folder": "o8nGPmux6bWEpn9M",
     "_key": "!macros!1ntDWMtnxAA1uZMH",
-    "command_source": "packs_source/weaponfx/Effects (Manual)/MissileAirBurst_1ntDWMtnxAA1uZMH.js"
+    "command_source": "packs_source/weaponfxray/Effects (Manual)/MissileAirBurst_1ntDWMtnxAA1uZMH.js"
 }

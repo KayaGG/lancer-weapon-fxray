@@ -9,24 +9,24 @@ const pBlast = {
 };
 
 await Sequencer.Preloader.preloadForClients([
-    "modules/lancer-weapon-fx/soundfx/NexusReady.ogg",
-    "modules/lancer-weapon-fx/soundfx/NexusFire.ogg",
+    "modules/lancer-weapon-fxray/soundfx/NexusReady.ogg",
+    "modules/lancer-weapon-fxray/soundfx/NexusFire.ogg",
     "jb2a.bullet.01.orange",
     "jb2a.side_impact.part.smoke.blue",
     "jb2a.impact.004.blue",
     "jb2a.zoning.inward.circle.loop",
-    "modules/lancer-weapon-fx/soundfx/NexusConfirm.ogg",
+    "modules/lancer-weapon-fxray/soundfx/NexusConfirm.ogg",
 ]);
 
 let sequence = new Sequence()
 
     .sound()
-        .file("modules/lancer-weapon-fx/soundfx/NexusReady.ogg")
+        .file("modules/lancer-weapon-fxray/soundfx/NexusReady.ogg")
         .volume(game.modules.get("lancer-weapon-fx").api.getEffectVolume(0.5))
         .waitUntilFinished();
 sequence
     .sound()
-        .file("modules/lancer-weapon-fx/soundfx/NexusFire.ogg")
+        .file("modules/lancer-weapon-fxray/soundfx/NexusFire.ogg")
         .volume(game.modules.get("lancer-weapon-fx").api.getEffectVolume(0.5))
         .repeats(3, 150);
 sequence
@@ -74,7 +74,7 @@ for (let i = 0; i < targetTokens.length; i++) {
             .atLocation(target);
     sequence
         .sound()
-            .file("modules/lancer-weapon-fx/soundfx/NexusConfirm.ogg")
+            .file("modules/lancer-weapon-fxray/soundfx/NexusConfirm.ogg")
             .volume(game.modules.get("lancer-weapon-fx").api.getEffectVolume(0.5))
             .playIf(!targetsMissed.has(target.id));
 }

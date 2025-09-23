@@ -1,7 +1,7 @@
 const { sourceToken } = game.modules.get("lancer-weapon-fx").api.getMacroVariables(this);
 
 await Sequencer.Preloader.preloadForClients([
-    "modules/lancer-weapon-fx/advisories/SystemTrauma.svg",
+    "modules/lancer-weapon-fxray/advisories/SystemTrauma.svg",
     "jb2a.static_electricity.03.blue",
 ]);
 
@@ -9,7 +9,7 @@ new Sequence()
 
     .effect()
         .xray()
-        .file("modules/lancer-weapon-fx/advisories/SystemTrauma.svg")
+        .file("modules/lancer-weapon-fxray/advisories/SystemTrauma.svg")
         .attachTo(sourceToken, { align: "bottom-left", edge: "inner" })
         .animateProperty("sprite", "position.y", { from: 0, to: 1, duration: 3500, gridUnits: true, fromEnd: true })
         .scaleIn(0.01, 500)

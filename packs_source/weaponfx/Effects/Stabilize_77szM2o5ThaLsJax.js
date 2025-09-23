@@ -7,20 +7,20 @@ const pivoty = token.document.flags["hex-size-support"]?.pivoty || 0;
 const ipivoty = -pivoty;
 
 await Sequencer.Preloader.preloadForClients([
-    "modules/lancer-weapon-fx/soundfx/Stabilize.ogg",
+    "modules/lancer-weapon-fxray/soundfx/Stabilize.ogg",
     "jb2a.healing_generic.400px.green",
-    "modules/lancer-weapon-fx/advisories/Stabilize.svg",
+    "modules/lancer-weapon-fxray/advisories/Stabilize.svg",
     "jb2a.ui.heartbeat.01.green",
 ]);
 
 let sequence = new Sequence()
 
     .sound()
-        .file("modules/lancer-weapon-fx/soundfx/Stabilize.ogg")
+        .file("modules/lancer-weapon-fxray/soundfx/Stabilize.ogg")
         .volume(game.modules.get("lancer-weapon-fx").api.getEffectVolume(0.5))
     .effect()
         .xray()
-        .file("modules/lancer-weapon-fx/advisories/Stabilize.svg")
+        .file("modules/lancer-weapon-fxray/advisories/Stabilize.svg")
         .attachTo(sourceToken, { align: "bottom", edge: "outer", offset: { y: -0.2 }, gridUnits: true })
         .scale(0.09)
         .filter("Glow", { distance: 2, color: 0x000000 })

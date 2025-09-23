@@ -1,30 +1,30 @@
 await Sequencer.Preloader.preloadForClients([
-    "modules/lancer-weapon-fx/sprites/jetlancer_explosion_white_bg.png",
-    "modules/lancer-weapon-fx/sprites/shockwave.png",
-    "modules/lancer-weapon-fx/soundfx/pw_nuke.ogg",
-    "modules/lancer-weapon-fx/video/pw_nuke_effect.webm",
+    "modules/lancer-weapon-fxray/sprites/jetlancer_explosion_white_bg.png",
+    "modules/lancer-weapon-fxray/sprites/shockwave.png",
+    "modules/lancer-weapon-fxray/soundfx/pw_nuke.ogg",
+    "modules/lancer-weapon-fxray/video/pw_nuke_effect.webm",
     "jb2a.ground_cracks.01.orange",
-    "modules/lancer-weapon-fx/sprites/scorch_mark_hires.png",
+    "modules/lancer-weapon-fxray/sprites/scorch_mark_hires.png",
 ]);
 
 new Sequence()
 
-    .effect("modules/lancer-weapon-fx/sprites/jetlancer_explosion_white_bg.png")
+    .effect("modules/lancer-weapon-fxray/sprites/jetlancer_explosion_white_bg.png")
         .fadeIn(100)
         .duration(6000)
         .fadeOut(3000)
         .screenSpace()
-    .effect("modules/lancer-weapon-fx/sprites/shockwave.png")
+    .effect("modules/lancer-weapon-fxray/sprites/shockwave.png")
         .atLocation(token)
         .duration(7000)
         .scale(0.2)
         .scaleOut(12, 7000)
         .fadeOut(7000)
         .delay(3000)
-    .sound("modules/lancer-weapon-fx/soundfx/pw_nuke.ogg")
+    .sound("modules/lancer-weapon-fxray/soundfx/pw_nuke.ogg")
         .startTime(800)
         .delay(1000)
-    .effect("modules/lancer-weapon-fx/video/pw_nuke_effect.webm")
+    .effect("modules/lancer-weapon-fxray/video/pw_nuke_effect.webm")
         .delay(1000)
         .atLocation(token)
         .aboveLighting()
@@ -47,7 +47,7 @@ new Sequence()
         .atLocation(token)
         .scale(2)
         .thenDo(createLight)
-    .effect("modules/lancer-weapon-fx/sprites/scorch_mark_hires.png")
+    .effect("modules/lancer-weapon-fxray/sprites/scorch_mark_hires.png")
         .atLocation(token)
         .scale(2.2)
         .persist()
