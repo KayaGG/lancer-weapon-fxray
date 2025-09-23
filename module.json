@@ -1,6 +1,6 @@
 {
-    "id": "lancer-weapon-fx",
-    "title": "Lancer Weapon FX",
+    "id": "lancer-weapon-fxray",
+    "title": "Lancer Weapon FXray",
     "description": "Special effects for weapons and items oriented towards Lancer TTRPG.",
     "authors": [
         {
@@ -11,6 +11,9 @@
         },
         {
             "name": "cirrahn"
+        },
+        {
+            "name": "KayaGG"
         }
     ],
     "version": "2.0.1",
@@ -18,8 +21,8 @@
         "minimum": 11,
         "verified": "12.328"
     },
-    "url": "https://github.com/Z3nner/lancer-weapon-fx",
-    "manifest": "https://github.com/Z3nner/lancer-weapon-fx/releases/latest/download/module.json",
+    "url": "https://github.com/KayaGG/lancer-weapon-fxray",
+    "manifest": "https://github.com/KayaGG/lancer-weapon-fxray/releases/latest/download/module.json",
     "download": "https://github.com/Z3nner/lancer-weapon-fx/releases/download/2.0.1/module.zip",
     "relationships": {
         "requires": [
@@ -67,10 +70,10 @@
     ],
     "packs": [
         {
-            "name": "weaponfx",
-            "label": "Lancer Weapon FX",
-            "path": "packs/weaponfx",
-            "module": "lancer-weapon-fx",
+            "name": "weaponfxray",
+            "label": "Lancer Weapon FXray",
+            "path": "packs/weaponfxray",
+            "module": "lancer-weapon-fxray",
             "type": "Macro"
         }
     ]
