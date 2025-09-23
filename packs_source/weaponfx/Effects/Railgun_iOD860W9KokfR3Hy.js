@@ -20,7 +20,7 @@ const repeatImpactAnimationForEachTarget = function (sequence, targets) {
     targets.forEach(t => {
         if (!targetsMissed.has(t.id)) {
             sequence
-                .effect()
+                .effect().xray()
                     .file("jb2a.impact.orange.0")
                     .atLocation(t)
                     .rotateTowards(sourceToken)
@@ -47,7 +47,7 @@ let sequence = new Sequence()
         .waitUntilFinished(-500);
 
 sequence
-    .effect()
+    .effect().xray()
         .file("jb2a.bullet.Snipe.blue")
         .atLocation(sourceToken)
         .stretchTo(target)

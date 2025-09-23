@@ -15,7 +15,7 @@ for (const target of targetTokens) {
             .file("modules/lancer-weapon-fx/soundfx/Melee.ogg")
             .volume(game.modules.get("lancer-weapon-fx").api.getEffectVolume(0.5));
     sequence
-        .effect()
+        .effect().xray()
             .file("jb2a.bite")
             .atLocation(target)
             .filter("ColorMatrix", { hue: 270 })
@@ -30,7 +30,7 @@ for (const target of targetTokens) {
             .playIf(!targetsMissed.has(target.id))
             .volume(game.modules.get("lancer-weapon-fx").api.getEffectVolume(0.5));
     sequence
-        .effect()
+        .effect().xray()
             .file("jb2a.divine_smite.caster.blueyellow")
             .playIf(!targetsMissed.has(target.id))
             .playbackRate(2.2)

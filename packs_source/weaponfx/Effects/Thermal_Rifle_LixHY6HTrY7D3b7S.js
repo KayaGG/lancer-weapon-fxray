@@ -21,7 +21,7 @@ for (const target of targetTokens) {
             .delay(400)
             .volume(game.modules.get("lancer-weapon-fx").api.getEffectVolume(0.5));
     sequence
-        .effect()
+        .effect().xray()
             .file("jb2a.fireball.beam.orange")
             .scale(1.25)
             .startTime(1500)
@@ -37,7 +37,7 @@ for (const target of targetTokens) {
             .delay(700)
             .volume(game.modules.get("lancer-weapon-fx").api.getEffectVolume(0.5));
     sequence
-        .effect()
+        .effect().xray()
             .file("jb2a.impact.orange.0")
             .playIf(!targetsMissed.has(target.id))
             .atLocation("impact")

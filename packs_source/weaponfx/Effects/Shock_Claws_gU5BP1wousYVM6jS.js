@@ -18,7 +18,7 @@ let sequence = new Sequence();
 
 for (const target of targetTokens) {
     sequence
-        sequence.effect()
+        sequence.effect().xray()
             .file("jb2a.claws.400px.red")
             .filter("Glow", { color: 0x33ddff, distance: 4, knockout: true } )
             .scaleToObject(1.7)
@@ -32,7 +32,7 @@ for (const target of targetTokens) {
             .repeats(2, 250);
     if (!targetsMissed.has(target.id)) {
         sequence
-            .effect()
+            .effect().xray()
                 .file("jb2a.static_electricity.03")
                 .atLocation(target, { offset: { x: ipivotx, y: ipivoty}})
                 .scaleToObject(1)
@@ -40,7 +40,7 @@ for (const target of targetTokens) {
                 .repeats(3, 300)
                 .delay(500)
                 .mask(target)
-            .effect()
+            .effect().xray()
                 .file("jb2a.impact.blue.2")
                 .scaleToObject(1.5)
                 .atLocation(target, { randomOffset: 0.5, gridUnits: true })

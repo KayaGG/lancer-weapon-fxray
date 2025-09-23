@@ -16,7 +16,7 @@ for (const target of targetTokens) {
             .repeats(5, 125);
 
     sequence
-        .effect()
+        .effect().xray()
             .file("jb2a.magic_missile.purple")
             .filter("ColorMatrix", { hue: 220 })
             .atLocation(sourceToken)

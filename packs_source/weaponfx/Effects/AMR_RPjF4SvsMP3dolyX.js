@@ -20,7 +20,7 @@ for (const target of targetTokens) {
             .file("modules/lancer-weapon-fx/soundfx/AMR_Fire.ogg")
             .volume(game.modules.get("lancer-weapon-fx").api.getEffectVolume(0.5));
     sequence
-        .effect()
+        .effect().xray()
             .file("jb2a.bullet.Snipe.blue")
             .filter("ColorMatrix", { hue: 200 })
             .atLocation(sourceToken)
@@ -33,7 +33,7 @@ for (const target of targetTokens) {
                 .volume(game.modules.get("lancer-weapon-fx").api.getEffectVolume(0.5))
                 .delay(75);
         sequence
-            .effect()
+            .effect().xray()
                 .file("jb2a.impact.orange.0")
                 .atLocation(target)
                 .rotateTowards(sourceToken)

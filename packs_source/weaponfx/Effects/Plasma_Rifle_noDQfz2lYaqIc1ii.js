@@ -19,7 +19,7 @@ for (let i = 0; i < targetTokens.length; i++) {
             .duration(633)
             .repeats(2, random);
     sequence
-        .effect()
+        .effect().xray()
             .file("jb2a.impact.004.blue")
             .playIf(!targetsMissed.has(target.id))
             .atLocation(`impact${i}`)
@@ -29,7 +29,7 @@ for (let i = 0; i < targetTokens.length; i++) {
             .delay(300)
             .playbackRate(1.5);
     sequence
-        .effect()
+        .effect().xray()
             .file("jb2a.lasershot.green")
             .atLocation(sourceToken)
             .stretchTo(target, { randomOffset: 0.3, gridUnits: true })

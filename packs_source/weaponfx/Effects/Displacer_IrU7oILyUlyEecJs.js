@@ -20,7 +20,7 @@ let sequence = new Sequence()
         .startTime(900)
         .fadeInAudio(300)
 
-    .effect()
+    .effect().xray()
         .file("jb2a.dancing_light.purplegreen")
         .tint("#2d0a3d")
         .filter("Glow", { strength: 1, color: 0x34e5d0 })
@@ -31,7 +31,7 @@ let sequence = new Sequence()
         .waitUntilFinished();
 
 sequence
-    .effect()
+    .effect().xray()
         .file("jb2a.fumes.steam.white")
         .fadeIn(1500)
         .fadeOut(1500)
@@ -45,7 +45,7 @@ sequence
         .file("modules/lancer-weapon-fx/soundfx/DisplacerHit2.ogg")
         .volume(game.modules.get("lancer-weapon-fx").api.getEffectVolume(0.8));
 sequence
-    .effect()
+    .effect().xray()
         .file("jb2a.divine_smite.caster.blueyellow")
         .tint("#2d0a3d")
         .filter("Glow", { strength: 1, color: 0x34e5d0 })
@@ -63,7 +63,7 @@ for (let i = 0; i < targetTokens.length; i++) {
                 .repeats(6, 200)
                 .volume(game.modules.get("lancer-weapon-fx").api.getEffectVolume(0.6));
         sequence
-            .effect()
+            .effect().xray()
                 .file("jb2a.impact.blue")
                 .tint("#2d0a3d")
                 .filter("Glow", { strength: 2, color: 0x34e5d0 })

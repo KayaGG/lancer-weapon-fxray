@@ -14,7 +14,7 @@ for (const target of targetTokens) {
             .delay(400)
             .volume(game.modules.get("lancer-weapon-fx").api.getEffectVolume(0.5));
     sequence
-        .effect()
+        .effect().xray()
             .file("jb2a.chain_lightning.primary.blue")
             .scale(0.7)
             .atLocation(sourceToken)

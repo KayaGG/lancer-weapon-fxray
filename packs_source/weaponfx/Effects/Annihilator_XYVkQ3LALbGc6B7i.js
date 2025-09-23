@@ -15,7 +15,7 @@ for (const target of targetTokens) {
             .file("modules/lancer-weapon-fx/soundfx/Annihilator_Charge.ogg")
             .volume(game.modules.get("lancer-weapon-fx").api.getEffectVolume(0.5));
     sequence
-        .effect()
+        .effect().xray()
             .file("jb2a.eldritch_blast.purple")
             .startTime(900)
             .scale(0.86)
@@ -30,7 +30,7 @@ for (const target of targetTokens) {
                 .file("modules/lancer-weapon-fx/soundfx/Annihilator.ogg")
                 .volume(game.modules.get("lancer-weapon-fx").api.getEffectVolume(0.5));
         sequence
-            .effect()
+            .effect().xray()
                 .file("jb2a.impact.blue.3")
                 .scale(1.0)
                 .tint("#c91af9")
@@ -42,7 +42,7 @@ for (const target of targetTokens) {
                 .file("modules/lancer-weapon-fx/soundfx/Annihilator.ogg")
                 .volume(game.modules.get("lancer-weapon-fx").api.getEffectVolume(0.5));
         sequence
-            .effect()
+            .effect().xray()
                 .file("jb2a.impact.blue.3")
                 .scale(1.0)
                 .tint("#c91af9")

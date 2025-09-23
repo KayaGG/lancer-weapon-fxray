@@ -11,7 +11,7 @@ let sequence = new Sequence();
 
 for (const target of targetTokens) {
     sequence
-        .effect()
+        .effect().xray()
             .file("jb2a.melee_generic.slash.01.orange")
 
         .atLocation(sourceToken)
@@ -32,7 +32,7 @@ for (const target of targetTokens) {
             .playIf(!targetsMissed.has(target.id))
             .volume(game.modules.get("lancer-weapon-fx").api.getEffectVolume(0.7));
     sequence
-        .effect()
+        .effect().xray()
             .file("jb2a.static_electricity.03.blue")
             .playIf(!targetsMissed.has(target.id))
             .scaleToObject(0.5)

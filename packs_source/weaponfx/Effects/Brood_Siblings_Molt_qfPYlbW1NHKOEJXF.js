@@ -11,7 +11,7 @@ let sequence = new Sequence();
 
 for (const target of targetTokens) {
     sequence
-        .effect()
+        .effect().xray()
             .file("jb2a.melee_attack.03.trail.greatsword")
             .tint("#080303")
             .filter("Glow", { color: 0x8f0f0f })
@@ -34,7 +34,7 @@ for (const target of targetTokens) {
                 .file("modules/lancer-weapon-fx/soundfx/bladehit.ogg")
                 .volume(game.modules.get("lancer-weapon-fx").api.getEffectVolume(0.7));
 
-        sequence.effect().file("jb2a.impact.blue").scaleToObject(2).atLocation(target).waitUntilFinished(-1500);
+        sequence.effect().xray().file("jb2a.impact.blue").scaleToObject(2).atLocation(target).waitUntilFinished(-1500);
     }
 }
 sequence.play();

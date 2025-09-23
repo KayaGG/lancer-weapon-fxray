@@ -14,7 +14,7 @@ for (const target of targetTokens) {
             .file("modules/lancer-weapon-fx/soundfx/RetortLoop.ogg")
             .volume(game.modules.get("lancer-weapon-fx").api.getEffectVolume(0.8));
     sequence
-        .effect()
+        .effect().xray()
             .file("jb2a.energy_beam.normal.bluepink.02")
             .scale(0.7)
             .atLocation(sourceToken)
@@ -24,7 +24,7 @@ for (const target of targetTokens) {
             .delay(200);
     if (!targetsMissed.has(target.id)) {
         sequence
-            .effect()
+            .effect().xray()
                 .file("jb2a.impact.blue")
                 .scale(0.3)
                 .atLocation(target, { randomOffset: 0.9 })
@@ -32,7 +32,7 @@ for (const target of targetTokens) {
                 .delay(700);
     } else {
         sequence
-            .effect()
+            .effect().xray()
                 .file("jb2a.impact.blue")
                 .scale(0.3)
                 .atLocation("impact", { randomOffset: 0.9 })

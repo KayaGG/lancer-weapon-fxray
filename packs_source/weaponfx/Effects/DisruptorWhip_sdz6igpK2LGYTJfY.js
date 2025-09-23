@@ -12,7 +12,7 @@ let sequence = new Sequence();
 
 for (const target of targetTokens) {
     sequence
-        .effect()
+        .effect().xray()
             .file("jb2a.divine_smite.target.blueyellow")
             .scale(0.9)
             .tint("#8c0353")
@@ -35,7 +35,7 @@ for (const target of targetTokens) {
                 .delay(800)
                 .volume(game.modules.get("lancer-weapon-fx").api.getEffectVolume(0.7));
         sequence
-            .effect()
+            .effect().xray()
                 .file("jb2a.extras.tmfx.outpulse.circle.01.normal")
                 .atLocation(target, { randomOffset: 0.7, gridUnits: true })
                 .scaleToObject(1.2)
@@ -47,7 +47,7 @@ for (const target of targetTokens) {
                 .delay(800);
 
         sequence
-            .effect()
+            .effect().xray()
                 .file("jb2a.impact.001")
                 .scaleToObject(1.2)
                 .tint("#8c0353")

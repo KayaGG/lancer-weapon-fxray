@@ -10,7 +10,7 @@ await Sequencer.Preloader.preloadForClients([
 
 for (const target of targetTokens) {
     sequence
-        .effect()
+        .effect().xray()
             .file("jb2a.melee_attack.03.maul.01")
             .atLocation(sourceToken)
             .spriteOffset({ x: -0.3 }, { gridUnits: true })
@@ -28,13 +28,13 @@ for (const target of targetTokens) {
                 .file("modules/lancer-weapon-fx/soundfx/HammerImpact.ogg")
                 .volume(game.modules.get("lancer-weapon-fx").api.getEffectVolume(0.9));
         sequence
-            .effect()
+            .effect().xray()
                 .file("jb2a.impact.ground_crack.orange.01")
                 .atLocation(target)
                 .belowTokens()
                 .scaleToObject(3)
                 .waitUntilFinished(-6000)
-            .effect()
+            .effect().xray()
                 .file("jb2a.impact.007.orange")
                 .atLocation(target)
                 .opacity(0.5)

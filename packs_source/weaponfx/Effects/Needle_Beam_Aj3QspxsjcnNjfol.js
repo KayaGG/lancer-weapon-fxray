@@ -20,7 +20,7 @@ for (const target of targetTokens) {
             .volume(game.modules.get("lancer-weapon-fx").api.getEffectVolume(0.5))
             .repeats(2, 225)
 
-        .effect()
+        .effect().xray()
             .file("jb2a.lasershot.green")
             .atLocation(sourceToken)
             .stretchTo(target)
@@ -29,7 +29,7 @@ for (const target of targetTokens) {
             .waitUntilFinished(-350);
     if (!targetsMissed.has(target.id)) {
         sequence
-            .effect()
+            .effect().xray()
                 .file("jb2a.impact.orange.0")
                 .atLocation(target)
                 .rotateTowards(sourceToken)

@@ -11,7 +11,7 @@ let sequence = new Sequence();
 
 for (const target of targetTokens) {
     sequence
-        .effect()
+        .effect().xray()
             .file("jb2a.melee_attack.03.trail.maul.01")
             .filter("Glow", {
             color: 0x18f014,
@@ -37,7 +37,7 @@ for (const target of targetTokens) {
                 .file("modules/lancer-weapon-fx/soundfx/HammerImpact.ogg")
                 .volume(game.modules.get("lancer-weapon-fx").api.getEffectVolume(0.9));
         sequence
-            .effect()
+            .effect().xray()
                 .file("jb2a.impact.ground_crack.orange.01")
                 .tint("#18f014")
                 .atLocation(target)

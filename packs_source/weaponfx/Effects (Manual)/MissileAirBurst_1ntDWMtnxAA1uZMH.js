@@ -29,13 +29,13 @@ let sequence = new Sequence()
         .volume(game.modules.get("lancer-weapon-fx").api.getEffectVolume(0.5))
         .timeRange(700, 2000);
 sequence
-    .effect()
+    .effect().xray()
         .file("jb2a.throwable.launch.missile")
         .scale(0.7)
         .from(sourceToken)
         .stretchTo(pBlast)
         .waitUntilFinished(-200)
-    .effect()
+    .effect().xray()
         .file("jb2a.explosion.08")
         .atLocation(pBlast)
         .name("impact")
@@ -49,13 +49,13 @@ for (let i = 0; i < targetTokens.length; i++) {
     let target = targetTokens[i];
 
     sequence
-        .effect()
+        .effect().xray()
             .file("jb2a.bullet.02.orange")
             .playIf(!targetsMissed.has(target.id))
             .scale(0.5)
             .atLocation(pBlast)
             .stretchTo(target)
-        .effect()
+        .effect().xray()
             .file("jb2a.explosion_side.01")
             .playIf(!targetsMissed.has(target.id))
             .atLocation(target)

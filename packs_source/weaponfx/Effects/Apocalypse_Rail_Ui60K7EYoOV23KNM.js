@@ -21,7 +21,7 @@ let sequence = new Sequence()
         .file("modules/lancer-weapon-fx/soundfx/APR2_Fire.ogg")
         .volume(game.modules.get("lancer-weapon-fx").api.getEffectVolume(0.5))
 
-    .effect()
+    .effect().xray()
         .file("jb2a.bullet.01.orange")
         .atLocation(sourceToken)
         .stretchTo(target)
@@ -29,7 +29,7 @@ let sequence = new Sequence()
         .waitUntilFinished(-300);
 
 sequence
-    .effect()
+    .effect().xray()
         .file("jb2a.fireball.explosion.orange")
         .atLocation(target)
         .zIndex(1)

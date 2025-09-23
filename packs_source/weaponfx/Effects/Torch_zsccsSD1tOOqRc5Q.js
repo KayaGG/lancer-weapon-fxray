@@ -11,7 +11,7 @@ let sequence = new Sequence();
 
 for (const target of targetTokens) {
     sequence
-        .effect()
+        .effect().xray()
             .file("jb2a.greataxe.melee.standard.white")
             .tint("#c91af9")
             .scale(0.8)
@@ -30,7 +30,7 @@ for (const target of targetTokens) {
             .delay(275)
             .volume(game.modules.get("lancer-weapon-fx").api.getEffectVolume(0.7));
     sequence
-        .effect()
+        .effect().xray()
             .file("jb2a.impact.blue.3")
             .playIf(!targetsMissed.has(target.id))
             .delay(275)

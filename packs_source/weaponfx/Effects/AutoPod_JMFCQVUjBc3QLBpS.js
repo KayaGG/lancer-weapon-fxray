@@ -15,7 +15,7 @@ for (const target of targetTokens) {
             .file("modules/lancer-weapon-fx/soundfx/Autopod_Fire.ogg")
             .volume(game.modules.get("lancer-weapon-fx").api.getEffectVolume(0.7));
     sequence
-        .effect()
+        .effect().xray()
             .file("jb2a.template_circle.vortex.loop.blue")
             .endTime(4700)
             .scale(0.2)
@@ -24,6 +24,6 @@ for (const target of targetTokens) {
             .moveTowards(target)
             .waitUntilFinished();
     sequence.sound().file("modules/lancer-weapon-fx/soundfx/Autopod_Impact.ogg").volume(0.7);
-    sequence.effect().file("jb2a.impact.yellow.1").scale(0.6).atLocation(target);
+    sequence.effect().xray().file("jb2a.impact.yellow.1").scale(0.6).atLocation(target);
 }
 sequence.play();

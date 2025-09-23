@@ -22,7 +22,7 @@ for (let i = 0; i < targetTokens.length; i++) {
             .volume(game.modules.get("lancer-weapon-fx").api.getEffectVolume(0.5))
             .timeRange(700, 2000);
     sequence
-        .effect()
+        .effect().xray()
             .file("jb2a.pack_hound_missile")
             .atLocation(sourceToken)
             .stretchTo(target)
@@ -30,7 +30,7 @@ for (let i = 0; i < targetTokens.length; i++) {
             .name(`impact${i}`)
             .waitUntilFinished(-3200);
     sequence
-        .effect()
+        .effect().xray()
             .file("jb2a.explosion.01.orange")
             .atLocation(`impact${i}`)
             .scale(0.8)
