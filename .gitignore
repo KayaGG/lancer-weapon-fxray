@@ -7,3 +7,12 @@ node_modules/
 
 # Compiled compendiums
 packs/
+/.vs/Lancer Weapon FXray/FileContentIndex/0f056071-31a0-4e1e-aad0-6fd8eda886bb.vsidx
+/.vs/Lancer Weapon FXray/FileContentIndex/85579fd4-03fe-49c9-b23f-335ab25b4647.vsidx
+/.vs/Lancer Weapon FXray/FileContentIndex/9dcc0d58-afb5-42ae-aba8-3284d53761e3.vsidx
+*.vsidx
+/.vs/Lancer Weapon FXray/v17/.wsuo
+/.vs/Lancer Weapon FXray/v17/DocumentLayout.json
+/.vs/slnx.sqlite
+*.sqlite-journal
+/.vs/VSWorkspaceState.json
