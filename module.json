@@ -20,7 +20,7 @@
     },
     "url": "https://github.com/Z3nner/lancer-weapon-fx",
     "manifest": "https://github.com/KayaGG/lancer-weapon-fxray/releases/latest/download/module.json",
-    "download": "https://github.com/KayaGG/lancer-weapon-fxray/releases/download/v1.0/module.zip",
+    "download": "https://github.com/KayaGG/lancer-weapon-fxray/releases/download/v1.1/module.zip",
     "relationships": {
         "requires": [
             {
