@@ -8,3 +8,5 @@ node_modules/
 # Compiled compendiums
 packs/
 /.vs
+/howto.txt
+/module.zip
